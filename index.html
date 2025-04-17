@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conectando Vidas</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#0f4c35", secondary: "#f5e6d0" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      .hero-bg {
+        background-image: url("https://readdy.ai/api/search-image?query=A%20warm%2C%20soft%20peach%20colored%20background%20with%20subtle%20watercolor%20splatters%20in%20light%20orange.%20The%20background%20should%20be%20very%20light%20and%20gentle%2C%20perfect%20for%20a%20pet%20adoption%20website.%20The%20texture%20should%20be%20soft%20and%20inviting%2C%20with%20delicate%20paint%20splashes%20that%20add%20visual%20interest%20without%20being%20distracting.&width=1920&height=600&seq=1&orientation=landscape");
+        background-size: cover;
+        background-position: center;
+      }
+      .welcome-title {
+        font-family: "Playfair Display", serif;
+      }
+      input:focus {
+        outline: none;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- Body -->
+  <body class="bg-[#fdf1dc] min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+      <div class="container mx-auto flex justify-center items-center">
+        <div class="flex items-center">
+          <!-- Imagem da Logo -->
+          <img
+            src="img/logo-removebg-preview.png"
+            alt="Logo"
+            style="width: 100x; height: 100px"
+          />
+          <!-- Itens Navegação-->
+          <nav class="hidden md:flex space-x-8 ml-10">
+            <a href="#" class="text-primary hover:text-primary/80 font-bold"
+              >Sobre Nós</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-primary hover:text-primary/80 font-bold"
+              >Adoção</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-primary hover:text-primary/80 font-bold"
+              >Doação</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-primary hover:text-primary/80 font-bold"
+              >Voluntariado</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-primary hover:text-primary/80 font-bold"
+              >Depoimentos</a
+            >
+          </nav>
+        </div>
+        <!-- Botões Entrar e Cadastrar -->
+        <div class="flex space-x-4 ml-10">
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap"
+          >
+            Entrar
+          </button>
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap"
+          >
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-bg py-12 w-full">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-2/3 mb-8 md:mb-0">
+            <h1
+              class="welcome-title text-primary text-4xl md:text-5xl font-bold mb-10"
+            >
+              Seja Bem Vindo(a)!
+            </h1>
+            <p class="text-gray-800 text-lg mb-3">
+              Conectando Vidas é onde amor e esperança se encontram! 💙
+            </p>
+            <p class="text-gray-800 text-lg mb-3">
+              Aqui, cada patinha conta uma história, e você pode ser o próximo
+              capítulo feliz.
+            </p>
+            <p class="text-gray-800 text-lg mb-6">
+              Adote, apadrinhe ou contribua – juntos, podemos salvar vidas!
+            </p>
+            
+          </div>
+          <div class="md:w-1/3 flex justify-center">
+            <!-- Imagem do Banner -->
+            <img
+              src="img/img2.png"
+              alt="Animais para adoção"
+              class="max-w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Novas patinhas Section -->
+    <section class="py-12 w-full">
+      <div class="container mx-auto px-6">
+        <div class="relative mb-8">
+          <div class="flex items-center justify-center">
+            <div class="h-px bg-amber-300 w-1/4"></div>
+            <h2
+              class="text-primary text-3xl font-['Playfair_Display'] font-bold mx-4 whitespace-nowrap"
+            >
+              Novas patinhas por aqui
+            </h2>
+            <div class="h-px bg-amber-300 w-1/4"></div>
+            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <i class="ri-footprint-line text-primary text-2xl"></i>
+              </div>
+              <div class="w-8 h-8 flex items-center justify-center -mt-2 ml-4">
+                <i class="ri-footprint-line text-primary text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="flex flex-wrap justify-center gap-8">
+            <!-- Novas Patinhas card 1-->
+            <div class="flex flex-col items-center group cursor-pointer">
+              <div
+                class="w-56 h-56 rounded-full bg-[#b8e3ff] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg"
+              >
+                <img
+                  src="img/dog.avif"
+                  alt="Max"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
+              <p class="text-gray-600">info</p>
+              <p class="text-gray-600">idade</p>
+            </div>
+
+            <!-- Novas Patinhas card 2-->
+            <div class="flex flex-col items-center group cursor-pointer">
+              <div
+                class="w-56 h-56 rounded-full bg-[#ffcba4] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg"
+              >
+                <img
+                  src="img/dog.avif"
+                  alt="Luna"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
+              <p class="text-gray-600">info</p>
+              <p class="text-gray-600">idade</p>
+            </div>
+
+            <!-- Novas Patinhas card 3-->
+            <div class="flex flex-col items-center group cursor-pointer">
+              <div
+                class="w-56 h-56 rounded-full bg-[#ffe9a4] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg"
+              >
+                <img
+                  src="img/dog.avif"
+                  alt="Pantera"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
+              <p class="text-gray-600">info</p>
+              <p class="text-gray-600">idade</p>
+            </div>
+
+            <!-- Novas Patinhas card 4-->
+            <div class="flex flex-col items-center group cursor-pointer">
+              <div
+                class="w-56 h-56 rounded-full bg-[#b8ffd8] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg"
+              >
+                <img
+                  src="img/dog.avif"
+                  alt="Bob"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
+              <p class="text-gray-600">info</p>
+              <p class="text-gray-600">idade</p>
+            </div>
+            
+
+          <!-- Navigation Arrows -->
+          <button
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary/90"
+          >
+            <div class="w-12 h-12 flex items-center justify-center">
+              <i class="ri-arrow-right-s-line text-2xl"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+      
+    <!-- Como Funciona -->
+
+    <!--
+    <section class="py-12 bg-[#fee7bc] w-full">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-primary text-3xl font-['Playfair_Display'] font-bold text-center mb-12"
+        >
+          Como Funciona
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-20 h-20 bg-[#b8e3ff] rounded-full flex items-center justify-center mb-4"
+            >
+              <div class="w-12 h-12 flex items-center justify-center">
+                <i class="ri-search-line text-primary text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-primary text-xl font-bold mb-2">
+              Encontre seu Pet
+            </h3>
+            <p class="text-gray-600">
+              Navegue pelos perfis dos nossos animais disponíveis para adoção e
+              encontre aquele que combina com você.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-20 h-20 bg-[#ffcba4] rounded-full flex items-center justify-center mb-4"
+            >
+              <div class="w-12 h-12 flex items-center justify-center">
+                <i class="ri-file-list-3-line text-primary text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-primary text-xl font-bold mb-2">
+              Preencha o Formulário
+            </h3>
+            <p class="text-gray-600">
+              Complete o formulário de adoção para que possamos conhecer melhor
+              você e seu ambiente familiar.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-20 h-20 bg-[#b8ffd8] rounded-full flex items-center justify-center mb-4"
+            >
+              <div class="w-12 h-12 flex items-center justify-center">
+                <i class="ri-home-heart-line text-primary text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-primary text-xl font-bold mb-2">Leve para Casa</h3>
+            <p class="text-gray-600">
+              Após a aprovação, você poderá levar seu novo amigo para casa e
+              iniciar uma nova história juntos.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-10">
+          <button
+            class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 whitespace-nowrap"
+          >
+            Ver Todos os Animais
+          </button>
+        </div>
+      </div>
+    </section>
+    -->
+    
+    <!-- script para o carrosel 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Adicionar funcionalidade de hover nos cards de pets
+        const petCards = document.querySelectorAll(".group");
+        petCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.querySelector(".rounded-full").classList.add("shadow-lg");
+          });
+          card.addEventListener("mouseleave", function () {
+            this.querySelector(".rounded-full").classList.remove("shadow-lg");
+          });
+        });
+      });
+    </script>  
+    -->
+  </body>
+</html>
