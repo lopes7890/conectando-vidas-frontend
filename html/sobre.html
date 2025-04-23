@@ -1,83 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conectando Vidas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conectando Vidas</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#0f4c35", secondary: "#f5e6d0" },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
 
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        .hero-bg {
+            background-image: url("https://readdy.ai/api/search-image?query=A%20warm%2C%20soft%20peach%20colored%20background%20with%20subtle%20watercolor%20splatters%20in%20light%20orange.%20The%20background%20should%20be%20very%20light%20and%20gentle%2C%20perfect%20for%20a%20pet%20adoption%20website.%20The%20texture%20should%20be%20soft%20and%20inviting%2C%20with%20delicate%20paint%20splashes%20that%20add%20visual%20interest%20without%20being%20distracting.&width=1920&height=600&seq=1&orientation=landscape");
+            background-size: cover;
+            background-position: center;
+        }
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#0f4c35",
-            secondary: "#f5e6d0",
-          },
-          borderRadius: {
-            none: "0px",
-            sm: "4px",
-            DEFAULT: "8px",
-            md: "12px",
-            lg: "16px",
-            xl: "20px",
-            "2xl": "24px",
-            "3xl": "32px",
-            full: "9999px",
-            button: "8px",
-          },
-        },
-      },
-    };
-  </script>
+        .welcome-title {
+            font-family: "Playfair Display", serif;
+        }
 
-  <!-- Fonts e ícones -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
+        input:focus {
+            outline: none;
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body class="bg-[#fdf1dc] min-h-screen">
-  <!-- Header (comum a todas as páginas) -->
-  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
-    <div class="container mx-auto flex justify-center items-center">
-      <div class="flex items-center">
-        <img src="../assets/img/logo-removebg-preview.png" alt="Logo" style="width: 100px; height: 100px" />
-        <nav class="hidden md:flex space-x-8 ml-10">
-          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
-          <span class="text-gray-400">|</span>
-          <a href="#" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
-          <span class="text-gray-400">|</span>
-          <a href="/html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
-          <span class="text-gray-400">|</span>
-          <a href="/html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
-          <span class="text-gray-400">|</span>
-          <a href="/html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
-          <span class="text-gray-400">|</span>
-          <a href="/html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
-        </nav>
-      </div>
-      <div class="flex space-x-4 ml-10">
-        <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-          Entrar
-        </button>
-        <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-          Cadastrar
-        </button>
-      </div>
-    </div>
-  </header>
+    <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+        <div class="container mx-auto flex justify-center items-center">
+            <div class="flex items-center">
+                <img src="/assets/img/logo.png" alt="Logo" style="width: 100x; height: 100px" />
+                <nav class="hidden md:flex space-x-8 ml-10">
+                    <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="../html/voluntario.html"
+                        class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="../html/depoimentos.html"
+                        class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+                </nav>
+            </div>
+            <div class="flex space-x-4 ml-10">
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <a href="html/entrar.html">Entrar</a>
+                </button>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <a href="html/cadastrar.html">Cadastrar</a>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
-  <main class="py-12 px-6 container mx-auto">
-    Inserir conteudo aqui
-  </main>
-
+    <main>
+        <!-- Banner com fundo escuro e imagem -->
+        <section class="relative h-[300px] bg-cover bg-center flex items-center justify-center" style="background-image: url('../assets/img/Sobre1.png');">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+          <h1 class="relative text-4xl text-white font-bold z-10">Quem somos</h1>
+        </section>
+      
+        <!-- Bloco vermelho claro com texto sobre o projeto -->
+        <section class="bg-[#f5e6d0] py-12 px-4 md:px-10 text-center">
+          <div class="bg-white/80 rounded-lg shadow-md p-6 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-primary mb-4">O Conectando Vidas</h2>
+            <p class="text-gray-700">
+              Nós do <strong>Conectando Vidas</strong> somos um projeto estudantil e social com o propósito de resgatar, cuidar e encaminhar cães e gatos abandonados para lares cheios de amor. Sem fins lucrativos, conectamos histórias, promovemos adoção responsável e mobilizamos voluntários apaixonados por transformar realidades.
+            </p>
+          </div>
+        </section>
+      
+        <!-- Fundador / História -->
+        <section class="bg-white py-12 px-4 md:px-10 text-center">
+          <h2 class="text-2xl font-bold text-primary mb-4">Nossa história</h2>
+          <p class="max-w-4xl mx-auto text-gray-700 leading-relaxed">
+            O <strong>Conectando Vidas</strong> nasceu da vontade de um grupo de jovens estudantes em unir empatia e tecnologia para ajudar animais em situação de risco. Desde então, resgatamos dezenas de cães e gatos, promovemos campanhas educativas e criamos uma plataforma que aproxima adotantes, doadores e voluntários. Nossa missão é dar voz e cuidado aos que mais precisam.
+          </p>
+        </section>
+      </main>
+      
 </body>
 
 </html>
