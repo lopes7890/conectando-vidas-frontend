@@ -73,13 +73,13 @@
       <h1 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Usuário</h1>
 
       <!-- Formulário de Cadastro -->
-      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form action="#" method="POST" id="formCadastro" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Lado Esquerdo -->
         <div class="space-y-4">
           <!-- Nome -->
           <div>
             <label for="nome" class="block text-lg text-gray-700">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
+            <input type="text" id="nome" name="name" placeholder="Digite seu nome completo"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -87,7 +87,7 @@
           <!-- Telefone -->
           <div>
             <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
-            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone"
+            <input type="text" id="telefone" name="phone" placeholder="Digite seu telefone"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -95,7 +95,14 @@
           <!-- Rua -->
           <div>
             <label for="rua" class="block text-lg text-gray-700">Rua</label>
-            <input type="text" id="rua" name="rua" placeholder="Digite o nome da rua"
+            <input type="text" id="rua" name="street" placeholder="Digite o nome da rua"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <div>
+            <label for="numero" class="block text-lg text-gray-700">Número</label>
+            <input type="text" id="numero" name="numberHome" placeholder="Digite o número da sua casa"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -103,7 +110,7 @@
           <!-- CEP -->
           <div>
             <label for="cep" class="block text-lg text-gray-700">CEP</label>
-            <input type="text" id="cep" name="cep" placeholder="Digite seu CEP"
+            <input type="text" id="cep" name="postalCode" placeholder="Digite seu CEP"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -122,7 +129,7 @@
           <!-- Idade -->
           <div>
             <label for="idade" class="block text-lg text-gray-700">Idade</label>
-            <input type="number" id="idade" name="idade" placeholder="Digite sua idade"
+            <input type="number" id="idade" name="age" placeholder="Digite sua idade"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -130,7 +137,7 @@
           <!-- Cidade -->
           <div>
             <label for="cidade" class="block text-lg text-gray-700">Cidade</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade"
+            <input type="text" id="cidade" name="city" placeholder="Digite sua cidade"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -138,7 +145,7 @@
           <!-- Estado -->
           <div>
             <label for="estado" class="block text-lg text-gray-700">Estado</label>
-            <input type="text" id="estado" name="estado" placeholder="Digite seu estado"
+            <input type="text" id="estado" name="state" placeholder="Digite seu estado"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
@@ -149,7 +156,7 @@
           <!-- Tipo de usuário -->
           <div>
             <label for="tipo" class="block text-lg text-gray-700">Tipo de Usuário</label>
-            <select id="tipo" name="tipo"
+            <select id="tipo" name="type"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required>
               <option value="voluntario">Voluntário</option>
@@ -161,7 +168,7 @@
           <!-- Senha -->
           <div>
             <label for="senha" class="block text-lg text-gray-700">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="Crie uma senha"
+            <input type="password" id="senha" name="password" placeholder="Crie uma senha"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
