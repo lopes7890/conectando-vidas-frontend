@@ -1,4 +1,4 @@
-const form = document.getElementById('formCadastro');
+const form = document.getElementById('loginUsuario');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); 
@@ -7,10 +7,8 @@ form.addEventListener('submit', async (event) => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    data.age = Number(data.age);
-
     try {
-        const response = await fetch('https://conectando-vidas-backend.onrender.com/cadastro/usuario', {
+        const response = await fetch('https://conectando-vidas-backend.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,12 +20,15 @@ form.addEventListener('submit', async (event) => {
         console.log('Resposta do backend:', result);
 
         if (response.ok) {
-          alert('Cadastro realizado com sucesso!');
+            localStorage.setItem('token', result);
+            alert('Login realizado com sucesso!');
+            window.location.href = '/index.html';
         } else {
-          alert('Erro ao cadastrar: ' + result.message ? result.message : result.error);
+          alert('Erro ao efetuar o login: ' + result.message ? result.message : result.error);
         }
     } catch (err) {
         console.error('Erro na requisição:', err);
         alert('Erro ao conectar com o servidor.');
     }
-});
+
+})
