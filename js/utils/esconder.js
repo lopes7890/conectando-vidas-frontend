@@ -1,15 +1,17 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    esconderBotao(); // ✅ chamado depois que a página estiver pronta
-  });
-
+document.addEventListener("DOMContentLoaded", () => {
+    esconderBotao(); // chamado assim que o HTML estiver pronto
+});
 
 export const esconderBotao = () => {
     const token = localStorage.getItem("token");
-
-    if (token) {
-    // Se estiver logado, oculta os botões
-        document.getElementById("botaoCadastrar").style.display = "none";
-        document.getElementById("botaoEntrar").style.display = "none";
-  }
-}
+  
+    if (!token) {
+      // Só mostra se NÃO estiver logado
+      const botaoCadastrar = document.getElementById("botaoCadastrar");
+      const botaoEntrar = document.getElementById("botaoEntrar");
+  
+      if (botaoCadastrar) botaoCadastrar.style.display = "inline-block";
+      if (botaoEntrar) botaoEntrar.style.display = "inline-block";
+    }
+  };

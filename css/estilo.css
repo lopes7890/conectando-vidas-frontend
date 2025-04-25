@@ -64,3 +64,8 @@ align-items: center;
 background-color: transparent;
 align-items: end;
 }
+
+#botaoEntrar,
+#botaoCadastrar {
+  display: none; /* esconde por padrão */
+}
