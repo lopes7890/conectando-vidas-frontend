@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectando Vidas</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="../js/utils/auth-checker-fixed.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f4c35",
+            secondary: "#f5e6d0",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#fdf1dc] min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
+        <nav class="hidden md:flex space-x-8 ml-10">
+          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+        </nav>
+      </div>
+      <div class="flex space-x-4 ml-10">
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
+  <main class="py-12 px-6 container mx-auto flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+      <h1 class="text-3xl font-bold text-primary mb-6 text-center">Formulário de Adoção</h1>
+
+      <!-- Formulário Adoção -->
+      <form action=# method="POST" id="formAdocao" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+       
+        <div class="space-y-4">
+          <!-- Nome -->
+          <div>
+            <label for="nome" class="block text-lg text-gray-700">Nome</label>
+            <input type="text" id="nome" name="name" placeholder="Digite seu nome completo"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+      
+          <!-- Telefone -->
+          <div>
+            <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
+            <input type="text" id="telefone" name="phone" placeholder="Digite seu telefone"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+      
+          <!-- Idade -->
+          <div>
+            <label for="idade" class="block text-lg text-gray-700">Idade</label>
+            <input type="number" id="idade" name="age" placeholder="Digite sua idade"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+      
+          <!-- CEP -->
+          <div>
+            <label for="cep" class="block text-lg text-gray-700">CEP</label>
+            <input type="text" id="cep" name="postalCode" placeholder="Digite seu CEP"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+        
+          <!-- Rua -->
+          <div>
+            <label for="rua" class="block text-lg text-gray-700">Rua</label>
+            <input type="text" id="rua" name="street" placeholder="Digite o nome da rua"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+          
+          <!-- Observações -->
+          <div>
+            <label for="obs" class="block text-lg text-gray-700">Observações</label>
+            <input type="text" id="obs" name="note"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"/>
+          </div>
+        </div>
+
+          <div class="space-y-4">
+          <!-- Cidade -->
+          <div>
+            <label for="cidade" class="block text-lg text-gray-700">Cidade/UF</label>
+            <input type="text" id="cidade" name="city" placeholder="Informe sua cidade"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="eamil" class="block text-lg text-gray-700">Email</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <!-- Motivo -->
+          <div>
+            <label for="motivo" class="block text-lg text-gray-700">Motivo para adotar</label>
+            <input type="text" id="motivo" name="reason"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <!-- Qual animal.... -->
+          <div>
+            <label for="#" class="block text-lg text-gray-700">Qual animal você quer adotar?</label>
+            <select id="#" name="#"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required>
+              <option value="cachorro1">cachorro1</option>
+              <option value="cachorro2">cachorro2</option>
+              <option value="cachorro3">cachorro3</option>
+            </select>
+          </div>
+
+      
+          <!-- Experiência com animais -->
+          <div>
+            <label for="experiencia" class="block text-lg text-gray-700">Experiência prévia com animais?</label>
+            <div class="flex items-center mt-2 space-x-4">
+              <input id="sim" name="experiencia" type="radio"
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                required />
+              <label for="sim" class="text-gray-700">Sim</label>
+              
+              <input id="nao" name="experiencia" type="radio"
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                required />
+              <label for="nao" class="text-gray-700">Não</label>
+            </div>
+            <input type="text" id="#" name="#" placeholder="Se sim, descreva"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+          </div>
+      
+          <!-- Confirmar -->
+          <div class="text-center mt-6">
+            <button type="submit"
+              class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <script src=""></script>
+</main>
+</body>
+</html>
+
+    
