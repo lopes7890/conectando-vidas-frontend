@@ -59,13 +59,12 @@
   // Verifica se a página atual requer autenticação
   function checkRequiresAuth() {
     // Lista de páginas que requerem autenticação
+    // Removidas voluntariado.html e sobre.html conforme solicitado pelo usuário
     const authPages = [
-      'voluntario.html',
       'depoimentos.html',
       'adocao.html',
-      'doacao.html',
-      'sobre.html'
-      // Adicione outras páginas que requerem autenticação
+      'doacao.html'
+      // Adicione outras páginas que requerem autenticação, exceto voluntariado.html e sobre.html
     ];
     
     // Obtém o caminho da página atual
