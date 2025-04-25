@@ -56,55 +56,9 @@
     }
   }
   
-  // Verifica se a página atual requer autenticação
-  function checkRequiresAuth() {
-    // Lista de páginas que requerem autenticação
-    // Removidas voluntariado.html e sobre.html conforme solicitado pelo usuário
-    const authPages = [
-      'depoimentos.html',
-      'adocao.html',
-      'doacao.html'
-      // Adicione outras páginas que requerem autenticação, exceto voluntariado.html e sobre.html
-    ];
-    
-    // Obtém o caminho da página atual
-    const currentPath = window.location.pathname;
-    
-    // Verifica se a página atual está na lista de páginas que requerem autenticação
-    for (let i = 0; i < authPages.length; i++) {
-      if (currentPath.indexOf(authPages[i]) !== -1) {
-        return true;
-      }
-    }
-    
-    return false;
-  }
-  
-  // Função principal que verifica autenticação e redireciona se necessário
-  function init() {
-    const isLoggedIn = checkLoginStatus();
-    const requiresAuth = checkRequiresAuth();
-    
-    // Se a página requer autenticação e o usuário não está logado
-    if (requiresAuth && !isLoggedIn) {
-      // Determina o caminho para a página de login
-      let loginPath = '';
-      
-      // Verifica se estamos em uma subpasta
-      if (window.location.pathname.includes('/html/')) {
-        loginPath = 'entrar.html';
-      } else {
-        loginPath = 'html/entrar.html';
-      }
-      
-      // Redireciona para a página de login
-      window.location.href = loginPath;
-    }
-  }
-  
   // Executa a verificação imediatamente
-  init();
+  checkLoginStatus();
   
   // Também verifica quando o DOM estiver completamente carregado
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', checkLoginStatus);
 })();
