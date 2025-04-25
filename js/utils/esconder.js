@@ -1,15 +1,24 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-    esconderBotao(); // ✅ chamado depois que a página estiver pronta
-  });
+  esconderBotao(); // ✅ chamado depois que a página estiver pronta
+});
 
 
 export const esconderBotao = () => {
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
-    if (token) {
-    // Se estiver logado, oculta os botões
-        document.getElementById("botaoCadastrar").style.display = "none";
-        document.getElementById("botaoEntrar").style.display = "none";
+  if (token) {
+      // Se estiver logado, oculta os botões
+      document.getElementById("botaoCadastrar").style.display = "none";
+      document.getElementById("botaoEntrar").style.display = "none";
+
+      // Mostra o botão "Sair"
+      const botaoSair = document.getElementById("botaoSair");
+      if (botaoSair) {
+          botaoSair.style.display = "block";
+          botaoSair.addEventListener("click", () => {
+              localStorage.removeItem("token");
+              location.reload();
+          });
+      }
   }
 }

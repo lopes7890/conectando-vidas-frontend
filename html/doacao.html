@@ -2,156 +2,159 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conectando Vidas - Doação</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectando Vidas - Doação</title>
 
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#0f4c35",
-                        secondary: "#f5e6d0",
-                    },
-                    borderRadius: {
-                        button: "8px",
-                    },
-                },
-            },
-        };
-    </script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="../js/utils/auth-checker-fixed.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f4c35",
+            secondary: "#f5e6d0",
+          },
+          borderRadius: {
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body class="bg-[#fdf1dc] min-h-screen">
 
-    <!-- Header -->
-    <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
-        <div class="container mx-auto flex justify-center items-center">
-            <div class="flex items-center">
-                <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
-                <nav class="hidden md:flex space-x-8 ml-10">
-                    <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="#" class="text-primary hover:text-primary/80 font-bold">Doação</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/voluntario.html"
-                        class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/depoimentos.html"
-                        class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
-                </nav>
-            </div>
-            <div class="flex space-x-4 ml-10">
-                <a href="../html/entrar.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">
-                        Entrar</button>
-                </a>
-                <a href="../html/cadastrar.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">
-                        Cadastrar</button>
-                </a>
-            </div>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
+        <nav class="hidden md:flex space-x-8 ml-10">
+          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+        </nav>
+      </div>
+      <!-- Botões Entrar e Cadastrar -->
+      <div class="flex space-x-4 ml-10">
+        <button id="botaoEntrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="html/entrar.html">Entrar</a>
+        </button>
+        <button id="botaoCadastrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="html/cadastrar.html">Cadastrar</a>
+        </button>
+        <button id="botaoSair"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="">Sair</a></button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Conteúdo da Página -->
-    <main class="py-12 px-6 container mx-auto">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl mx-auto">
-            <h1 class="text-3xl font-bold text-primary mb-6 text-center">Faça sua Doação</h1>
+  <!-- Conteúdo da Página -->
+  <main class="py-12 px-6 container mx-auto">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl mx-auto">
+      <h1 class="text-3xl font-bold text-primary mb-6 text-center">Faça sua Doação</h1>
 
-            <form action="#" method="POST" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="nome" class="block text-lg text-gray-700">Nome</label>
-                        <input type="text" id="nome" name="nome"
-                            class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-lg text-gray-700">Email</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
-                    </div>
-                </div>
-
-                <div>
-                    <label for="tipoDoacao" class="block text-lg text-gray-700">Tipo de Doação</label>
-                    <select id="tipoDoacao" name="tipoDoacao"
-                        class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
-                        <option value="">Selecione</option>
-                        <option value="dinheiro">Dinheiro</option>
-                        <option value="racao">Ração</option>
-                        <option value="higiene">Produtos de Higiene</option>
-                        <option value="medicamentos">Medicamentos</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="descricao" class="block text-lg text-gray-700">Descrição da Doação</label>
-                    <textarea id="descricao" name="descricao" rows="4"
-                        class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary"
-                        placeholder="Ex: valor em reais, quantidade de ração, descrição do item..."></textarea>
-                </div>
-
-                <div class="text-center">
-                    <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button hover:bg-primary/90">
-                        Enviar Doação
-                    </button>
-                </div>
-            </form>
+      <form action="#" method="POST" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="nome" class="block text-lg text-gray-700">Nome</label>
+            <input type="text" id="nome" name="nome"
+              class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
+          </div>
+          <div>
+            <label for="email" class="block text-lg text-gray-700">Email</label>
+            <input type="email" id="email" name="email"
+              class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
+          </div>
         </div>
 
-        <!-- Seção de Dúvidas Frequentes -->
-        <section class="mt-16 bg-secondary p-8 rounded-lg shadow-md max-w-3xl mx-auto">
-            <h2 class="text-2xl font-bold text-primary mb-6 text-center">Dúvidas Frequentes</h2>
+        <div>
+          <label for="tipoDoacao" class="block text-lg text-gray-700">Tipo de Doação</label>
+          <select id="tipoDoacao" name="tipoDoacao"
+            class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary" required>
+            <option value="">Selecione</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="racao">Ração</option>
+            <option value="higiene">Produtos de Higiene</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
 
-            <div class="space-y-4">
-                <details class="bg-white p-4 rounded-lg shadow">
-                    <summary class="cursor-pointer font-medium text-primary">Posso doar qualquer valor?</summary>
-                    <p class="mt-2 text-gray-700">Sim! Qualquer valor é bem-vindo e será muito útil para ajudar animais
-                        em situação de vulnerabilidade.</p>
-                </details>
+        <div>
+          <label for="descricao" class="block text-lg text-gray-700">Descrição da Doação</label>
+          <textarea id="descricao" name="descricao" rows="4"
+            class="w-full mt-2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary"
+            placeholder="Ex: valor em reais, quantidade de ração, descrição do item..."></textarea>
+        </div>
 
-                <details class="bg-white p-4 rounded-lg shadow">
-                    <summary class="cursor-pointer font-medium text-primary">Como sei que a doação foi recebida?
-                    </summary>
-                    <p class="mt-2 text-gray-700">Você receberá um e-mail de confirmação e poderá acompanhar o andamento
-                        pelo nosso site.</p>
-                </details>
+        <div class="text-center">
+          <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button hover:bg-primary/90">
+            Enviar Doação
+          </button>
+        </div>
+      </form>
+    </div>
 
-                <details class="bg-white p-4 rounded-lg shadow">
-                    <summary class="cursor-pointer font-medium text-primary">Posso doar ração presencialmente?</summary>
-                    <p class="mt-2 text-gray-700">Claro! Nossa sede está aberta de segunda a sábado das 9h às 17h. Veja
-                        o endereço na página de contato.</p>
-                </details>
+    <!-- Seção de Dúvidas Frequentes -->
+    <section class="mt-16 bg-secondary p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-primary mb-6 text-center">Dúvidas Frequentes</h2>
 
-                <details class="bg-white p-4 rounded-lg shadow">
-                    <summary class="cursor-pointer font-medium text-primary">Recebo algum comprovante?</summary>
-                    <p class="mt-2 text-gray-700">Sim, emitimos comprovantes por e-mail para qualquer tipo de doação
-                        registrada.</p>
-                </details>
-            </div>
-        </section>
-    </main>
+      <div class="space-y-4">
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="cursor-pointer font-medium text-primary">Posso doar qualquer valor?</summary>
+          <p class="mt-2 text-gray-700">Sim! Qualquer valor é bem-vindo e será muito útil para ajudar animais
+            em situação de vulnerabilidade.</p>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="cursor-pointer font-medium text-primary">Como sei que a doação foi recebida?
+          </summary>
+          <p class="mt-2 text-gray-700">Você receberá um e-mail de confirmação e poderá acompanhar o andamento
+            pelo nosso site.</p>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="cursor-pointer font-medium text-primary">Posso doar ração presencialmente?</summary>
+          <p class="mt-2 text-gray-700">Claro! Nossa sede está aberta de segunda a sábado das 9h às 17h. Veja
+            o endereço na página de contato.</p>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="cursor-pointer font-medium text-primary">Recebo algum comprovante?</summary>
+          <p class="mt-2 text-gray-700">Sim, emitimos comprovantes por e-mail para qualquer tipo de doação
+            registrada.</p>
+        </details>
+      </div>
+    </section>
+  </main>
 
 
-    <!-- Rodapé -->
-<footer class="bg-primary text-white mt-10 py-10 text-sm">
+  <!-- Rodapé -->
+  <footer class="bg-primary text-white mt-10 py-10 text-sm">
     <div class="container mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-  
+
       <div>
         <h3 class="font-bold mb-2">Institucional</h3>
         <ul class="space-y-1">
@@ -160,7 +163,7 @@
           <li><a href="#" class="hover:underline">Mapa do Site</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Adotar</h3>
         <ul class="space-y-1">
@@ -169,7 +172,7 @@
           <li><a href="#" class="hover:underline">Busca de adoção detalhada</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Doar</h3>
         <ul class="space-y-1">
@@ -178,7 +181,7 @@
           <li><a href="#" class="hover:underline">Cadastrar doação</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Animal Perdido</h3>
         <ul class="space-y-1">
@@ -186,7 +189,7 @@
           <li><a href="#" class="hover:underline">Lista de animais Perdidos</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Animal Encontrado</h3>
         <ul class="space-y-1">
@@ -194,7 +197,7 @@
           <li><a href="#" class="hover:underline">Lista de animais Encontrados</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Voluntários</h3>
         <ul class="space-y-1">
@@ -203,7 +206,7 @@
         </ul>
       </div>
     </div>
-  
+
     <!-- Base -->
     <div
       class="container mx-auto px-6 mt-8 border-t border-white/30 pt-4 flex flex-col sm:flex-row justify-between items-center text-white text-xs">
@@ -224,9 +227,9 @@
       </div>
     </div>
   </footer>
-    <!-- Fim do Rodapé -->
+  <!-- Fim do Rodapé -->
 
-    
+
 
 </body>
 

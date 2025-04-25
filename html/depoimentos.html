@@ -7,6 +7,7 @@
     <title>Depoimentos | Conectando Vidas</title>
 
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="../js/utils/auth-checker-fixed.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -47,22 +48,25 @@
                     <span class="text-gray-400">|</span>
                     <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
                     <span class="text-gray-400">|</span>
-                    <a href="../html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+                    <a href="../html/voluntario.html"
+                        class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
                     <span class="text-gray-400">|</span>
                     <a href="#" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
                 </nav>
             </div>
+            <!-- Botões Entrar e Cadastrar -->
             <div class="flex space-x-4 ml-10">
-                <a href="../html/entrar.html">
-                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-                        Entrar
-                    </button>
-                </a>
-                <a href="../html/cadastrar.html">
-                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-                        Cadastrar
-                    </button>
-                </a>
+                <button id="botaoEntrar"
+                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <a href="html/entrar.html">Entrar</a>
+                </button>
+                <button id="botaoCadastrar"
+                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <a href="html/cadastrar.html">Cadastrar</a>
+                </button>
+                <button id="botaoSair"
+                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <a href="">Sair</a></button>
             </div>
         </div>
     </header>
@@ -112,11 +116,11 @@
                 <h3 class="text-lg font-bold text-primary">Thiago e Lola</h3>
                 <p class="text-sm text-gray-700 mt-2">Uma conexão instantânea. A Lola é como minha filha!</p>
             </div>
-        </div>        
+        </div>
     </main>
-   
 
-    
+
+
 </body>
 
 
