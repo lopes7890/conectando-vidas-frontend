@@ -68,14 +68,14 @@
     </div>
   </header>
 
-  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA - Formulário de Cadastro -->
+  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
   <main class="py-12 px-6 container mx-auto flex justify-center items-center">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
-      <h1 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Usuário</h1>
+      <h1 class="text-3xl font-bold text-primary mb-6 text-center">Formulário de Adoção</h1>
 
-      <!-- Formulário de Cadastro -->
-      <form action="#" method="POST" id="formCadastro" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Lado Esquerdo -->
+      <!-- Formulário Adoção -->
+      <form action=# method="POST" id="formAdocao" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+       
         <div class="space-y-4">
           <!-- Nome -->
           <div>
@@ -84,7 +84,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-
+      
           <!-- Telefone -->
           <div>
             <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
@@ -92,41 +92,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-
-          <!-- Rua -->
-          <div>
-            <label for="rua" class="block text-lg text-gray-700">Rua</label>
-            <input type="text" id="rua" name="street" placeholder="Digite o nome da rua"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              required />
-          </div>
-
-          <div>
-            <label for="numero" class="block text-lg text-gray-700">Número</label>
-            <input type="text" id="numero" name="numberHome" placeholder="Digite o número da sua casa"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              required />
-          </div>
-
-          <!-- CEP -->
-          <div>
-            <label for="cep" class="block text-lg text-gray-700">CEP</label>
-            <input type="text" id="cep" name="postalCode" placeholder="Digite seu CEP"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              required />
-          </div>
-        </div>
-
-        <!-- Lado Direito -->
-        <div class="space-y-4">
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-lg text-gray-700">Email</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              required />
-          </div>
-
+      
           <!-- Idade -->
           <div>
             <label for="idade" class="block text-lg text-gray-700">Idade</label>
@@ -134,64 +100,104 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-
-          <!-- Cidade -->
+      
+          <!-- CEP -->
           <div>
-            <label for="cidade" class="block text-lg text-gray-700">Cidade</label>
-            <input type="text" id="cidade" name="city" placeholder="Digite sua cidade"
+            <label for="cep" class="block text-lg text-gray-700">CEP</label>
+            <input type="text" id="cep" name="postalCode" placeholder="Digite seu CEP"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-
-          <!-- Estado -->
+        
+          <!-- Rua -->
           <div>
-            <label for="estado" class="block text-lg text-gray-700">Estado</label>
-            <input type="text" id="estado" name="state" placeholder="Digite seu estado"
+            <label for="rua" class="block text-lg text-gray-700">Rua</label>
+            <input type="text" id="rua" name="street" placeholder="Digite o nome da rua"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
+          </div>
+          
+          <!-- Observações -->
+          <div>
+            <label for="obs" class="block text-lg text-gray-700">Observações</label>
+            <input type="text" id="obs" name="note"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"/>
           </div>
         </div>
 
-        <!-- Tipo de Usuário e Senha -->
-        <div class="col-span-2 space-y-4">
-          <!-- Tipo de usuário -->
+          <div class="space-y-4">
+          <!-- Cidade -->
           <div>
-            <label for="tipo" class="block text-lg text-gray-700">Tipo de Usuário</label>
-            <select id="tipo" name="type"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              required>
-              <option value="voluntario">Voluntário</option>
-              <option value="adotante">Adotante</option>
-              <option value="doador">Doador</option>
-            </select>
-          </div>
-
-          <!-- Senha -->
-          <div>
-            <label for="senha" class="block text-lg text-gray-700">Senha</label>
-            <input type="password" id="senha" name="password" placeholder="Crie uma senha"
+            <label for="cidade" class="block text-lg text-gray-700">Cidade/UF</label>
+            <input type="text" id="cidade" name="city" placeholder="Informe sua cidade"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
 
-          <!-- Botão de Cadastrar -->
-          <div class="col-span-2 text-center mt-6">
+          <!-- Email -->
+          <div>
+            <label for="eamil" class="block text-lg text-gray-700">Email</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <!-- Motivo -->
+          <div>
+            <label for="motivo" class="block text-lg text-gray-700">Motivo para adotar</label>
+            <input type="text" id="motivo" name="reason"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required />
+          </div>
+
+          <!-- Qual animal.... -->
+          <div>
+            <label for="#" class="block text-lg text-gray-700">Qual animal você quer adotar?</label>
+            <select id="#" name="#"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              required>
+              <option value="cachorro1">cachorro1</option>
+              <option value="cachorro2">cachorro2</option>
+              <option value="cachorro3">cachorro3</option>
+            </select>
+          </div>
+
+      
+          <!-- Experiência com animais -->
+          <div>
+            <label for="experiencia" class="block text-lg text-gray-700">Experiência prévia com animais?</label>
+            <div class="flex items-center mt-2 space-x-4">
+              <input id="sim" name="experiencia" type="radio"
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                required />
+              <label for="sim" class="text-gray-700">Sim</label>
+              
+              <input id="nao" name="experiencia" type="radio"
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                required />
+              <label for="nao" class="text-gray-700">Não</label>
+            </div>
+            <input type="text" id="#" name="#" placeholder="Se sim, descreva"
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+          </div>
+      
+          <!-- Confirmar -->
+          <div class="text-center mt-6">
             <button type="submit"
-              class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
-              Cadastrar
+              class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:outline-none">
+              Confirmar
             </button>
           </div>
+        </div>
       </form>
 
-      <div class="mt-6 text-center">
-        <p class="text-gray-600">Já tem uma conta? <a href="../html/entrar.html"
-            class="text-primary font-semibold hover:text-primary/80">Entrar</a></p>
-      </div>
     </div>
   </main>
 
-  <script src="../js/api/cadastroUsuarios.js"></script>
-
+  <script src=""></script>
+</main>
 </body>
-
 </html>
+
+    

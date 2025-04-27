@@ -2,130 +2,131 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voluntariado | Conectando Vidas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voluntariado | Conectando Vidas</title>
 
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#0f4c35",
-                        secondary: "#f5e6d0",
-                    },
-                    borderRadius: {
-                        none: "0px",
-                        sm: "4px",
-                        DEFAULT: "8px",
-                        md: "12px",
-                        lg: "16px",
-                        xl: "20px",
-                        "2xl": "24px",
-                        "3xl": "32px",
-                        full: "9999px",
-                        button: "8px",
-                    },
-                },
-            },
-        };
-    </script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="../js/utils/auth-checker-fixed.js"></script>
 
-    <link rel="stylesheet" href="../css/estilo.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f4c35",
+            secondary: "#f5e6d0",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
 
-    <!-- Fonts e ícones -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Fonts e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body class="bg-[#fdf1dc] min-h-screen">
-    <!-- Header (comum a todas as páginas) -->
-    <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
-        <div class="container mx-auto flex justify-center items-center">
-            <div class="flex items-center">
-                <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
-                <nav class="hidden md:flex space-x-8 ml-10">
-                    <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="#" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/depoimentos.html"
-                        class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
-                </nav>
-            </div>
-            <div class="flex space-x-4 ml-10">
-                <a href="../html/entrar.html">
-                    <button id="botaoEntrar" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-                        Entrar
-                    </button>
-                </a>
-                <a href="/html/cadastrar.html">
-                    <button id="botaoCadastrar" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-                        Cadastrar
-                    </button>
-                </a>
-            </div>
+  <!-- Header (comum a todas as páginas) -->
+  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
+        <nav class="hidden md:flex space-x-8 ml-10">
+          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+          <span class="text-gray-400">|</span>
+          <a href="#" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+        </nav>
+      </div>
+      <!-- Botões Entrar e Cadastrar -->
+      <div class="flex space-x-4 ml-10">
+        <button id="botaoEntrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="../html/entrar.html">Entrar</a>
+        </button>
+        <button id="botaoCadastrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="../html/cadastrar.html">Cadastrar</a>
+        </button>
+        <button id="botaoSair"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="">Sair</a></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
+  <main class="py-12 px-6 container mx-auto">
+    <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4">Seja um Voluntário!</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        Ser voluntário é uma das formas mais nobres de contribuir com a sociedade. No Conectando Vidas, você
+        pode nos ajudar a cuidar dos animais, participar de eventos, auxiliar nas redes sociais e muito mais!
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Não exigimos experiência, apenas vontade de ajudar. Toda contribuição é bem-vinda — seja com seu tempo,
+        talento ou boas ideias.
+      </p>
+      <a href="/html/cadastrar.html"
+        class="inline-block bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition">
+        Quero Me Cadastrar
+      </a>
+    </section>
+
+    <section class="bg-[#fff9f2] rounded-lg shadow-md p-6">
+      <h3 class="text-2xl font-semibold text-primary mb-4">Dúvidas Frequentes</h3>
+      <div class="space-y-4">
+        <div>
+          <h4 class="font-semibold text-lg text-primary">Preciso ter experiência prévia?</h4>
+          <p class="text-gray-700">Não! Qualquer pessoa com disposição para ajudar é bem-vinda.</p>
         </div>
-    </header>
+        <div>
+          <h4 class="font-semibold text-lg text-primary">Quais são as áreas de atuação?</h4>
+          <p class="text-gray-700">Você pode ajudar no cuidado com os animais, em eventos, nas redes sociais
+            ou em tarefas administrativas.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg text-primary">Existe algum horário fixo?</h4>
+          <p class="text-gray-700">Não. Você define seus horários conforme sua disponibilidade.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg text-primary">Recebo certificado?</h4>
+          <p class="text-gray-700">Sim! Emitimos certificados de participação para todos os voluntários
+            ativos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
-    <main class="py-12 px-6 container mx-auto">
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-bold text-primary mb-4">Seja um Voluntário!</h2>
-            <p class="text-lg text-gray-700 mb-4">
-                Ser voluntário é uma das formas mais nobres de contribuir com a sociedade. No Conectando Vidas, você
-                pode nos ajudar a cuidar dos animais, participar de eventos, auxiliar nas redes sociais e muito mais!
-            </p>
-            <p class="text-lg text-gray-700 mb-6">
-                Não exigimos experiência, apenas vontade de ajudar. Toda contribuição é bem-vinda — seja com seu tempo,
-                talento ou boas ideias.
-            </p>
-            <a href="/html/cadastrar.html"
-                class="inline-block bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition">
-                Quero Me Cadastrar
-            </a>
-        </section>
-
-        <section class="bg-[#fff9f2] rounded-lg shadow-md p-6">
-            <h3 class="text-2xl font-semibold text-primary mb-4">Dúvidas Frequentes</h3>
-            <div class="space-y-4">
-                <div>
-                    <h4 class="font-semibold text-lg text-primary">Preciso ter experiência prévia?</h4>
-                    <p class="text-gray-700">Não! Qualquer pessoa com disposição para ajudar é bem-vinda.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-primary">Quais são as áreas de atuação?</h4>
-                    <p class="text-gray-700">Você pode ajudar no cuidado com os animais, em eventos, nas redes sociais
-                        ou em tarefas administrativas.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-primary">Existe algum horário fixo?</h4>
-                    <p class="text-gray-700">Não. Você define seus horários conforme sua disponibilidade.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-primary">Recebo certificado?</h4>
-                    <p class="text-gray-700">Sim! Emitimos certificados de participação para todos os voluntários
-                        ativos.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-<!-- Rodapé -->
-<footer class="bg-primary text-white mt-10 py-10 text-sm">
+  <!-- Rodapé -->
+  <footer class="bg-primary text-white mt-10 py-10 text-sm">
     <div class="container mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-  
+
       <div>
         <h3 class="font-bold mb-2">Institucional</h3>
         <ul class="space-y-1">
@@ -134,7 +135,7 @@
           <li><a href="#" class="hover:underline">Mapa do Site</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Adotar</h3>
         <ul class="space-y-1">
@@ -143,7 +144,7 @@
           <li><a href="#" class="hover:underline">Busca de adoção detalhada</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Doar</h3>
         <ul class="space-y-1">
@@ -152,7 +153,7 @@
           <li><a href="#" class="hover:underline">Cadastrar doação</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Animal Perdido</h3>
         <ul class="space-y-1">
@@ -160,7 +161,7 @@
           <li><a href="#" class="hover:underline">Lista de animais Perdidos</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Animal Encontrado</h3>
         <ul class="space-y-1">
@@ -168,7 +169,7 @@
           <li><a href="#" class="hover:underline">Lista de animais Encontrados</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h3 class="font-bold mb-2">Voluntários</h3>
         <ul class="space-y-1">
@@ -177,7 +178,7 @@
         </ul>
       </div>
     </div>
-  
+
     <!-- Base -->
     <div
       class="container mx-auto px-6 mt-8 border-t border-white/30 pt-4 flex flex-col sm:flex-row justify-between items-center text-white text-xs">

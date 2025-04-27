@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectando Vidas</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="../js/utils/auth-checker-fixed.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f4c35",
+            secondary: "#f5e6d0",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#fdf1dc] min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
+        <nav class="hidden md:flex space-x-8 ml-10">
+          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+        </nav>
+      </div>
+      <div class="flex space-x-4 ml-10">
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
+  <main class="py-12 px-6 container mx-auto">
+    <!--Inserir conteudo aqui-->
+    <section class="perfil-animal">
+      <div class="flex flex-wrap items-start gap-8">
+        <img src="../assets/img/dog2.png" alt="descrição" class="border-4 border-green-300 p-2">    
+        <div class="w-full sm:w-96 h-auto bg-white p-6 rounded-lg flex flex-col space-y-6">
+          <h1 class="text-3xl font-bold text-primary mb-2">Max Bolinha</h1>
+          <p class="text-lg text-gray-700"><span class="font-bold">Idade:</span> 4 anos</p>
+          <p class="text-lg text-gray-700"><span class="font-bold">Nascimento:</span> 01/2021</p>
+          <p class="text-lg text-gray-700"><span class="font-bold">Cor:</span> Marrom</p>
+          <p class="text-lg text-gray-700"><span class="font-bold">Sexo:</span> Macho</p>
+          <p class="text-lg text-gray-700"><span class="font-bold">Especial:</span> Adora bolinhas</p>
+          <p class="text-lg text-gray-700"><span class="font-bold">Descrição:</span> Max é um cão de médio porte que ama correr e brincar. Muito leal e obediente, está sempre disposto a proteger quem ama.
+          </p>
+          <a href="../html/form_adocao.html">
+            <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
+                Quero Já
+            </button>
+
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
