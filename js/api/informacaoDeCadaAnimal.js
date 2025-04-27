@@ -23,7 +23,7 @@ const carregarPerfilAnimal = async () => {
         });
       const animal = await resposta.json();
 
-      document.getElementById('animal-imagem').src = `https://conectando-vidas-backend.onrender.com/uploads/${animal.foto}`;
+      document.getElementById('animal-imagem').src = `${animal.foto}`;
       document.getElementById('animal-nome').textContent = animal.nome;
       document.getElementById('animal-idade').innerHTML = `<span class="font-bold">Idade:</span> ${animal.idade} anos`;
       //document.getElementById('animal-nascimento').innerHTML = `<span class="font-bold">Nascimento:</span> ${animal.nascimento}`;

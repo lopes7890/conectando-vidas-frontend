@@ -12,7 +12,7 @@ const carregarAnimais = async () => {
 
         // Criando a imagem do animal
         const img = document.createElement('img');
-        img.src = `https://conectando-vidas-backend.onrender.com/uploads/${animal.foto}`
+        img.src = `${animal.foto}`
         img.alt = `${animal.nome}`;
         img.classList.add('w-full', 'h-48', 'object-cover', 'rounded-lg', 'mb-4');
         
