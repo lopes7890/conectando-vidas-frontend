@@ -87,102 +87,8 @@
     <main class="py-12 px-6 container mx-auto">
         <h1 class="text-4xl font-bold text-primary mb-8">Adote um AUmigo</h1>
 
-        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <!-- Cartões de animais para adoção -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/dog1.png" alt="Cachorro 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Cachorro 1</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 2 anos<br>
-                    Sexo: Masculino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
-
-            <!-- 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/dog2.png" alt="Cachorro 2" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Cachorro 2</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 3 anos<br>
-                    Sexo: Feminino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
-
-            <!-- 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/dog3.png" alt="Cachorro 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Cachorro 3</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 1 ano<br>
-                    Sexo: Feminino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
-
-            <!-- 4 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/cat1.png" alt="Gato 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Gato 1</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 6 meses<br>
-                    Sexo: Masculino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
-
-            <!-- 5 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/cat2.png" alt="Gato 2" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Gato 2</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 1 ano<br>
-                    Sexo: Feminino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
-
-            <!-- 6 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="../assets/img/cat3.png" alt="Gato 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h2 class="text-xl font-semibold text-primary">Gato 3</h2>
-                <p class="text-gray-600 mb-4">
-                    Idade: 3 anos<br>
-                    Sexo: Masculino<br>
-                    Porte: Inserir
-                </p>
-                <a href="../html/perfil_animal.html">
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 w-full">
-                        Adotar
-                    </button>
-                </a>
-            </div>
+        <section id="animais-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Os cartões de animais serão adicionados aqui pelo JS -->
         </section>
 
         <section class="mt-12">
@@ -275,7 +181,7 @@
         </div>
     </footer>
     <!-- Fim do Rodapé -->
-
+    <script src="../js/api/todosOsAnimais.js"></script>
     <script src="../js/utils/auth-checker-fixed.js"></script>
     <script type="module" src="../js/utils/esconder.js"></script>
 
