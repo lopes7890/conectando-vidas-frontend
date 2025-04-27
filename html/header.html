@@ -16,7 +16,7 @@
       }
   
       botaoSair?.addEventListener("click", () => {
-        localStorage.removeItem("usuarioLogado");
+        localStorage.removeItem("token");
         location.reload();
       });
     });
@@ -54,7 +54,7 @@
     </div>
   </header>
 
-  <script type="module" src="./js/utils/esconder.js"></script>
+  <script type="module" src="../js/utils/esconder.js"></script>
 
 
 </body>
