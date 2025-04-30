@@ -2,6 +2,8 @@ const form = document.getElementById('formCadastro');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); 
+    const loader = document.getElementById("loader");
+    loader.style.display = "flex";
 
     // Cria um objeto com os dados do formulário
     const formData = new FormData(form);
@@ -23,11 +25,14 @@ form.addEventListener('submit', async (event) => {
 
         if (response.ok) {
           alert('Cadastro realizado com sucesso!');
+          window.location.href = './entrar.html'
         } else {
           alert('Erro ao cadastrar: ' + result.message ? result.message : result.error);
         }
     } catch (err) {
         console.error('Erro na requisição:', err);
         alert('Erro ao conectar com o servidor.');
+    } finally {
+        loader.style.display = "none";
     }
 });
