@@ -1,4 +1,6 @@
 const carregarAnimais = async () => {
+    const loader = document.getElementById("loader");
+    loader.style.display = "flex";
     try {
       const resposta = await fetch('https://conectando-vidas-backend.onrender.com/animals'); // Substitua pela URL do seu backend
       const animais = await resposta.json();
@@ -48,7 +50,10 @@ const carregarAnimais = async () => {
         container.appendChild(divAnimal);
       });
     } catch (erro) {
+      document.getElementById('animais-container').innerHTML = '<p style="color:red;">Erro ao carregar animais. Tente novamente mais tarde.</p>';
       console.error('Erro ao carregar animais:', erro);
+    } finally {
+      loader.style.display = "none";
     }
   }
 
