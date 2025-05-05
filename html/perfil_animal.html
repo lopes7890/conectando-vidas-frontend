@@ -6,7 +6,7 @@
   <title>Conectando Vidas</title>
 
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script src="../js/api/informacaoDeCadaAnimal.js"></script>
+  
 
   <script>
     tailwind.config = {
@@ -36,6 +36,7 @@
   <!-- Fonts e ícones -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/estilo.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
@@ -70,6 +71,10 @@
 
   <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
   <main class="py-12 px-6 container mx-auto">
+
+    <div id="loader" class="loader-container" style="display: none;">
+      <div class="spinner"></div>
+    </div>
     <!--Inserir conteudo aqui-->
     <section class="perfil-animal">
       <div class="flex flex-wrap items-start gap-8">
@@ -93,7 +98,8 @@
     </section>
   </main>
 
-
+  <script src="../js/api/informacaoDeCadaAnimal.js"></script>
+  <script src="../js/utils/verificacaoDeValidadeDoToken.js"></script>
   <script src="../js/utils/auth-checker-fixed.js"></script>
   <script type="module" src="../js/utils/esconder.js"></script>
 </body>

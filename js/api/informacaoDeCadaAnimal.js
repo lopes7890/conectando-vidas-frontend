@@ -1,6 +1,9 @@
 const carregarPerfilAnimal = async () => {
     try {
 
+      const loader = document.getElementById("loader");
+      loader.style.display = "flex";
+
       const tokenJWT = localStorage.getItem("token");
 
       if (!tokenJWT){
@@ -34,7 +37,10 @@ const carregarPerfilAnimal = async () => {
       document.getElementById('animal-status').innerHTML = `<span class="font-bold">Status:</span> ${animal.status_adocao}`;
     } catch (erro) {
       console.error('Erro ao carregar perfil do animal:', erro);
-    }
+    } finally {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+  }
   }
 
   // Chama a função para carregar os dados do animal ao carregar a página
