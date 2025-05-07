@@ -2,251 +2,226 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conectando Vidas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectando Vidas</title>
 
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script src="../js/utils/auth-checker-fixed.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="../js/utils/auth-checker-fixed.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#0f4c35",
-                        secondary: "#f5e6d0",
-                    },
-                    borderRadius: {
-                        none: "0px",
-                        sm: "4px",
-                        DEFAULT: "8px",
-                        md: "12px",
-                        lg: "16px",
-                        xl: "20px",
-                        "2xl": "24px",
-                        "3xl": "32px",
-                        full: "9999px",
-                        button: "8px",
-                    },
-                },
-            },
-        };
-    </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f4c35",
+            secondary: "#f5e6d0",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
 
-    <!-- Fonts e ícones -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Fonts e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
 
 <body class="bg-[#fdf1dc] min-h-screen">
-    <!-- Header -->
-    <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
-        <div class="container mx-auto flex justify-center items-center">
-            <div class="flex items-center">
-                <!-- Imagem da Logo -->
-                <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
-                <!-- <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" /> -->
-                <!-- Itens Navegação-->
-                <nav class="hidden md:flex space-x-8 ml-10">
-                    <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/voluntario.html"
-                        class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="../html/depoimentos.html"
-                        class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
+  <!-- Header -->
+  <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="flex items-center">
+        <!-- Imagem da Logo -->
+        <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" />
+        <!-- <img src="../assets/img/logo.png" alt="Logo" style="width: 250px; height: 250px" /> -->
+        <!-- Itens Navegação-->
+        <nav class="hidden md:flex space-x-8 ml-10">
+          <a href="../index.html" class="text-primary hover:text-primary/80 font-bold">Início</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/sobre.html" class="text-primary hover:text-primary/80 font-bold">Sobre Nós</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/adocao.html" class="text-primary hover:text-primary/80 font-bold">Adoção</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/doacao.html" class="text-primary hover:text-primary/80 font-bold">Doação</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/voluntario.html" class="text-primary hover:text-primary/80 font-bold">Voluntariado</a>
+          <span class="text-gray-400">|</span>
+          <a href="../html/depoimentos.html" class="text-primary hover:text-primary/80 font-bold">Depoimentos</a>
 
-                </nav>
-            </div>
-            <!-- Botões Entrar e Cadastrar -->
-            <div class="flex space-x-4 ml-10">
-                <button id="botaoEntrar"
-                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
-                    <a href="../html/entrar.html">Entrar</a>
-                </button>
-                <button id="botaoCadastrar"
-                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
-                    <a href="../html/cadastrar.html">Cadastrar</a>
-                </button>
-                <button id="botaoSair"
-                    class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
-                    <a href="">Sair</a></button>
-            </div>
+        </nav>
+      </div>
+      <!-- Botões Entrar e Cadastrar -->
+      <div class="flex space-x-4 ml-10">
+        <button id="botaoEntrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="../html/entrar.html">Entrar</a>
+        </button>
+        <button id="botaoCadastrar"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="../html/cadastrar.html">Cadastrar</a>
+        </button>
+        <button id="botaoSair"
+          class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap">
+          <a href="">Sair</a></button>
+      </div>
+    </div>
+  </header>
+  <!-- Conteudo da página-->
+  <main class="container mx-auto px-6 py-10">
+    <form class="bg-white p-8 rounded-lg shadow-md space-y-6 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Animal</h2>
+      <div>
+        <label for="nomeAnimal" class="block text-primary font-semibold mb-1">Nome do Animal</label>
+        <input type="text" id="nomeAnimal" name="nomeAnimal" class="w-full border border-gray-300 rounded-md p-2"
+          required />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="especie" class="block text-primary font-semibold mb-1">Espécie</label>
+          <select id="especie" name="especie" class="w-full border border-gray-300 rounded-md p-2" required>
+            <option value="">Selecione</option>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+          </select>
         </div>
 
-        <!-- Conteudo da página-->
-        <main class="container mx-auto px-6 py-10">
-            <h2 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Animal</h2>
-            <form class="bg-white p-8 rounded-lg shadow-md space-y-6 max-w-3xl mx-auto">
-                <div>
-                    <label for="nomeAnimal" class="block text-primary font-semibold mb-1">Nome do Animal</label>
-                    <input type="text" id="nomeAnimal" name="nomeAnimal"
-                        class="w-full border border-gray-300 rounded-md p-2" required />
-                </div>
+        <div>
+          <label for="raca" class="block text-primary font-semibold mb-1">Raça</label>
+          <input type="text" id="raca" name="raca" class="w-full border border-gray-300 rounded-md p-2" />
+        </div>
+      </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label for="especie" class="block text-primary font-semibold mb-1">Espécie</label>
-                        <select id="especie" name="especie" class="w-full border border-gray-300 rounded-md p-2"
-                            required>
-                            <option value="">Selecione</option>
-                            <option value="Cachorro">Cachorro</option>
-                            <option value="Gato">Gato</option>
-                        </select>
-                    </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="sexo" class="block text-primary font-semibold mb-1">Sexo</label>
+          <select id="sexo" name="sexo" class="w-full border border-gray-300 rounded-md p-2" required>
+            <option value="">Selecione</option>
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+          </select>
+        </div>
 
-                    <div>
-                        <label for="raca" class="block text-primary font-semibold mb-1">Raça</label> 
-                        <input type="text" id="raca" name="raca" class="w-full border border-gray-300 rounded-md p-2" />
-                    </div>
-                </div>
+        <div>
+          <label for="idade" class="block text-primary font-semibold mb-1">Idade (em anos)</label>
+          <input type="number" id="idade" name="idade" class="w-full border border-gray-300 rounded-md p-2" min="0" />
+        </div>
+      </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label for="sexo" class="block text-primary font-semibold mb-1">Sexo</label>
-                        <select id="sexo" name="sexo" class="w-full border border-gray-300 rounded-md p-2" required>
-                            <option value="">Selecione</option>
-                            <option value="Macho">Macho</option>
-                            <option value="Fêmea">Fêmea</option>
-                        </select>
-                    </div>
+      <div>
+        <label for="descricao" class="block text-primary font-semibold mb-1">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="4" class="w-full border border-gray-300 rounded-md p-2"
+          placeholder="Fale um pouco sobre o animal..."></textarea>
+      </div>
 
-                    <div>
-                        <label for="idade" class="block text-primary font-semibold mb-1">Idade (em anos)</label>
-                        <input type="number" id="idade" name="idade"
-                            class="w-full border border-gray-300 rounded-md p-2" min="0" />
-                    </div>
-                </div>
+      <div>
+        <label for="foto" class="block text-primary font-semibold mb-1">Foto do Animal</label>
+        <input type="file" id="foto" name="foto" accept="image/*" class="w-full" />
+      </div>
 
-                <div>
-                    <label for="descricao" class="block text-primary font-semibold mb-1">Descrição</label>
-                    <textarea id="descricao" name="descricao" rows="4"
-                        class="w-full border border-gray-300 rounded-md p-2"
-                        placeholder="Fale um pouco sobre o animal..."></textarea>
-                </div>
+      <div class="text-center">
+        <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">
+          Cadastrar Animal
+        </button>
+      </div>
+    </form>
+  </main>
 
-                <div>
-                    <label for="foto" class="block text-primary font-semibold mb-1">Foto do Animal</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" class="w-full" />
-                </div>
+  <!-- Rodapé -->
+  <footer class="bg-primary text-white mt-10 py-10 text-sm">
+    <div class="container mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
 
-                <div class="text-center">
-                    <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">
-                        Cadastrar Animal
-                    </button>
-                </div>
-            </form>
-        </main>
+      <div>
+        <h3 class="font-bold mb-2">Institucional</h3>
+        <ul class="space-y-1">
+          <li><a href="../html/sobre.html" class="hover:underline">Quem Somos</a></li>
+          <li><a href="../html/contato.html" class="hover:underline">Fale Conosco</a></li>
+          <li><a href="#" class="hover:underline">Mapa do Site</a></li>
+        </ul>
+      </div>
 
-        <!-- Rodapé -->
-        <footer class="bg-primary text-white mt-10 py-10 text-sm">
-            <div class="container mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-      
-              <div>
-                <h3 class="font-bold mb-2">Institucional</h3>
-                <ul class="space-y-1">
-                  <li><a href="../html/sobre.html" class="hover:underline">Quem Somos</a></li>
-                  <li><a href="../html/contato.html" class="hover:underline">Fale Conosco</a></li>
-                  <li><a href="#" class="hover:underline">Mapa do Site</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h3 class="font-bold mb-2">Adotar</h3>
-                <ul class="space-y-1">
-                  <li><a href="../html/adocao.html" class="hover:underline">Adoção de Cachorro</a></li>
-                  <li><a href="../html/adocao.html" class="hover:underline">Adoção de Gato</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h3 class="font-bold mb-2">Doar</h3>
-                <ul class="space-y-1">
-                  <li><a href="../html/doacao.html" class="hover:underline">Doação de Cachorros</a></li>
-                  <li><a href="../html/doacao.html" class="hover:underline">Doação de Gatos</a></li>
-                  <li><a href="../html/doacao.html" class="hover:underline">Cadastrar doação</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h3 class="font-bold mb-2">Animal Perdido</h3>
-                <ul class="space-y-1">
-                  <li><a href="/html/cadastroanimal.html" class="hover:underline">Cadastrar animal Perdido</a></li>
-                  <li><a href="#" class="hover:underline">Lista de animais Perdidos</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h3 class="font-bold mb-2">Animal Encontrado</h3>
-                <ul class="space-y-1">
-                  <li><a href="../html/cadastrar.html" class="hover:underline">Cadastrar animal Encontrado</a></li>
-                  <li><a href="#" class="hover:underline">Lista de animais Encontrados</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h3 class="font-bold mb-2">Voluntários</h3>
-                <ul class="space-y-1">
-                  <li><a href="../html/voluntario.html" class="hover:underline">Seja um voluntário</a></li>
-                  <li><a href="../html/cadastrar.html" class="hover:underline">Cadastrar Vaga</a></li>
-                </ul>
-              </div>
-            </div>
-      
-            <!-- Base -->
-            <div
-              class="container mx-auto px-6 mt-8 border-t border-white/30 pt-4 flex flex-col sm:flex-row justify-between items-center text-white text-xs">
-              <div class="mb-2 sm:mb-0">
-                <p>
-                  © Instituto Conectando Vidas – IAA, CNPJ: 01.234.567/0001-23 – Todos os direitos reservados.
-                </p>
-              </div>
-              <div class="flex space-x-4">
-                <a href="#" class="flex items-center space-x-1 hover:text-pink-200">
-                  <i class="ri-instagram-line"></i>
-                  <span>Instagram</span>
-                </a>
-                <a href="#" class="flex items-center space-x-1 hover:text-blue-300">
-                  <i class="ri-facebook-circle-line"></i>
-                  <span>Facebook</span>
-                </a>
-              </div>
-            </div>
-          </footer>
-            <!-- Base -->
-            <div
-                class="container mx-auto px-6 mt-8 border-t border-white/30 pt-4 flex flex-col sm:flex-row justify-between items-center text-white text-xs">
-                <div class="mb-2 sm:mb-0">
-                    <p>
-                        © Instituto Conectando Vidas – IAA, CNPJ: 01.234.567/8901-23 – Todos os direitos reservados.
-                    </p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="flex items-center space-x-1 hover:text-pink-200">
-                        <i class="ri-instagram-line"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-1 hover:text-blue-300">
-                        <i class="ri-facebook-circle-line"></i>
-                        <span>Facebook</span>
-                    </a>
-                </div>
-            </div>
-        </footer>
+      <div>
+        <h3 class="font-bold mb-2">Adotar</h3>
+        <ul class="space-y-1">
+          <li><a href="../html/adocao.html" class="hover:underline">Adoção de Cachorro</a></li>
+          <li><a href="../html/adocao.html" class="hover:underline">Adoção de Gato</a></li>
+        </ul>
+      </div>
 
-        <script type="module" src="./js/utils/esconder.js"></script>
+      <div>
+        <h3 class="font-bold mb-2">Doar</h3>
+        <ul class="space-y-1">
+          <li><a href="../html/doacao.html" class="hover:underline">Doação de Cachorros</a></li>
+          <li><a href="../html/doacao.html" class="hover:underline">Doação de Gatos</a></li>
+          <li><a href="../html/doacao.html" class="hover:underline">Cadastrar doação</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Animal Perdido</h3>
+        <ul class="space-y-1">
+          <li><a href="/html/cadastroanimal.html" class="hover:underline">Cadastrar animal Perdido</a></li>
+          <li><a href="#" class="hover:underline">Lista de animais Perdidos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Animal Encontrado</h3>
+        <ul class="space-y-1">
+          <li><a href="../html/cadastrar.html" class="hover:underline">Cadastrar animal Encontrado</a></li>
+          <li><a href="#" class="hover:underline">Lista de animais Encontrados</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Voluntários</h3>
+        <ul class="space-y-1">
+          <li><a href="../html/voluntario.html" class="hover:underline">Seja um voluntário</a></li>
+          <li><a href="../html/cadastrar.html" class="hover:underline">Cadastrar Vaga</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Base -->
+    <div
+      class="container mx-auto px-6 mt-8 border-t border-white/30 pt-4 flex flex-col sm:flex-row justify-between items-center text-white text-xs">
+      <div class="mb-2 sm:mb-0">
+        <p>
+          © Instituto Conectando Vidas – IAA, CNPJ: 01.234.567/0001-23 – Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#" class="flex items-center space-x-1 hover:text-pink-200">
+          <i class="ri-instagram-line"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="#" class="flex items-center space-x-1 hover:text-blue-300">
+          <i class="ri-facebook-circle-line"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/utils/esconder.js"></script>
 </body>
 
 </html>
