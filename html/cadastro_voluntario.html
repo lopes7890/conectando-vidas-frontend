@@ -29,10 +29,14 @@
   <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
     <h1 class="text-2xl font-bold text-primary mb-6 text-center">Cadastro de Voluntário</h1>
 
-    <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <form action="#" id="formVoluntario" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Coluna Esquerda -->
       <div class="space-y-4">
-        <div>
+        <!-- <div>
           <label for="nome" class="block text-lg text-gray-700">Nome</label>
           <input type="text" id="nome" name="name" placeholder="Digite seu nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
         </div>
@@ -40,7 +44,7 @@
         <div>
           <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
           <input type="text" id="telefone" name="phone" placeholder="Digite seu telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
-        </div>
+        </div> -->
 
         <div>
           <label for="idade" class="block text-lg text-gray-700">Idade</label>
@@ -49,7 +53,7 @@
 
         <div>
           <label for="disponibilidade" class="block text-lg text-gray-700">Disponibilidade</label>
-          <input type="text" id="disponibilidade" name="availability" placeholder="Ex: Manhã, Tarde, Noite" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
+          <input type="text" id="disponibilidade" name="disponibility" placeholder="Ex: Manhã, Tarde, Noite" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
         </div>
       </div>
 
@@ -57,7 +61,7 @@
       <div class="space-y-4">
         <div>
           <label for="area" class="block text-lg text-gray-700">Área de Interesse</label>
-          <select id="area" name="interest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+          <select id="area" name="interest_area" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="Eventos">Eventos</option>
             <option value="Administração">Administração</option>
             <option value="Outras">Outras</option>
@@ -66,12 +70,15 @@
 
         <div>
           <label for="experiencia" class="block text-lg text-gray-700">Experiência</label>
-          <input type="text" id="experiencia" name="experience" placeholder="Informe suas experiências" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+          <select id="area" name="experience" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
         </div>
 
         <div>
           <label for="descricao" class="block text-lg text-gray-700">Descreva sua Experiência</label>
-          <textarea id="descricao" name="experienceDescription" placeholder="Descreva brevemente sua experiência" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+          <textarea id="descricao" name="experience_description" placeholder="Descreva brevemente sua experiência" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
         </div>
 
         <div>
@@ -84,7 +91,13 @@
         <button type="submit" class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Cadastrar</button>
       </div>
     </form>
+
+    <div class="col-span-2 text-center mt-6">
+        <a href="../index.html"><button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Voltar</button></a>
+    </div>
   </div>
+
+  <script src="../js/api/cadastroVoluntario.js"></script>
 </body>
 
 </html>
