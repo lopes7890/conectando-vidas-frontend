@@ -43,39 +43,44 @@
 
 <body class="bg-[#fdf1dc] min-h-screen">
   <main class="container mx-auto px-6 py-10">
-    <form class="bg-white p-8 rounded-lg shadow-md space-y-6 max-w-3xl mx-auto">
+
+    <div id="loader" class="loader-container" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+    
+    <form id="formCadastro" class="bg-white p-8 rounded-lg shadow-md space-y-6 max-w-3xl mx-auto">
       <h2 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Animal</h2>
 
       <div>
         <label for="name" class="block text-primary font-semibold mb-1">Nome do Animal</label>
-        <input type="text" id="name" name="nomeAnimal" class="w-full border border-gray-300 rounded-md p-2"
+        <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md p-2"
           required />
       </div>
 
       <div>
         <label for="description" class="block text-primary font-semibold mb-1">Descrição</label>
-        <textarea id="description" name="descricao" rows="4" class="w-full border border-gray-300 rounded-md p-2"
+        <textarea id="description" name="description" rows="4" class="w-full border border-gray-300 rounded-md p-2"
           placeholder="Fale um pouco sobre o animal..." required></textarea>
       </div>
 
       <div>
         <label for="age" class="block text-primary font-semibold mb-1">Idade (em anos)</label>
-        <input type="number" id="age" name="idade" class="w-full border border-gray-300 rounded-md p-2" min="0"
+        <input type="number" id="age" name="age" class="w-full border border-gray-300 rounded-md p-2" min="0"
           required />
       </div>
 
       <div>
         <label for="sex" class="block text-primary font-semibold mb-1">Sexo</label>
-        <select id="sex" name="sexo" class="w-full border border-gray-300 rounded-md p-2" required>
+        <select id="sex" name="sex" class="w-full border border-gray-300 rounded-md p-2" required>
           <option value="">Selecione</option>
-          <option value="Macho">Macho</option>
-          <option value="Fêmea">Fêmea</option>
+          <option value="macho">Macho</option>
+          <option value="femea">Fêmea</option>
         </select>
       </div>
 
       <div>
         <label for="status_adotion" class="block text-primary font-semibold mb-1">Status da Adoção</label>
-        <select id="status_adotion" name="status" class="w-full border border-gray-300 rounded-md p-2" required>
+        <select id="status_adotion" name="status_adotion" class="w-full border border-gray-300 rounded-md p-2" required>
           <option value="">Selecione</option>
           <option value="Disponível">Disponível</option>
           <option value="Adotado">Adotado</option>
@@ -84,7 +89,7 @@
 
       <div>
         <label for="nome_ong" class="block text-primary font-semibold mb-1">Nome da ONG</label>
-        <input type="text" id="nome_ong" name="nomeOng" class="w-full border border-gray-300 rounded-md p-2" required />
+        <input type="text" id="nome_ong" name="name_ong" class="w-full border border-gray-300 rounded-md p-2" required />
       </div>
 
       <div class="text-center">
