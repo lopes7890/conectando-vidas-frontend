@@ -48,8 +48,7 @@
 
       <div>
         <label for="name" class="block text-primary font-semibold mb-1">Nome do Animal</label>
-        <input type="text" id="name" name="nomeAnimal" class="w-full border border-gray-300 rounded-md p-2"
-          required />
+        <input type="text" id="name" name="nomeAnimal" class="w-full border border-gray-300 rounded-md p-2" required />
       </div>
 
       <div>
@@ -84,7 +83,10 @@
 
       <div>
         <label for="nome_ong" class="block text-primary font-semibold mb-1">Nome da ONG</label>
-        <input type="text" id="nome_ong" name="nomeOng" class="w-full border border-gray-300 rounded-md p-2" required />
+        <select type="text" id="nome_ong" name="nomeOng" class="w-full border border-gray-300 rounded-md p-2" required>
+          <option value="">Selecione</option>
+          <option value="Disponível">Disponível</option>
+          <option value="Adotado">Adotado</option>
       </div>
 
       <div class="text-center">
