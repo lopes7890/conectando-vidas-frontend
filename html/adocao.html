@@ -42,6 +42,73 @@
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        /* Estilos adicionais para os filtros e cards, se necessário, podem ser colocados aqui ou no estilo.css */
+        .filter-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .filter-container h2 {
+            color: #0f4c35;
+            margin-bottom: 15px;
+        }
+        .filter-group {
+            margin-bottom: 10px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #0f4c35;
+        }
+        .filter-group input[type=\'text\'],
+        .filter-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .animal-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .animal-card h3 {
+            color: #0f4c35;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .animal-card p {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .loader-container .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #0f4c35;
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 
 <body class="bg-[#fdf1dc] min-h-screen">
@@ -88,12 +155,36 @@
         style="background-image: url('../assets/img/Ideia/AU1.png'); border: 5px solid #2f6541;">
     </section>
 
+    <!-- Seção de Filtros -->
+    <section class="container mx-auto px-6 py-8">
+        <div class="filter-container">
+            <h2 class="text-2xl font-semibold text-center mb-6">Encontre seu Novo Amigo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="filter-group">
+                    <label for="filtro-nome">Nome do Animal:</label>
+                    <input type="text" id="filtro-nome" placeholder="Digite o nome" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                </div>
+                <div class="filter-group">
+                    <label for="filtro-idade">Idade (anos):</label>
+                    <input type="text" id="filtro-idade" placeholder="Digite a idade" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                </div>
+                <div class="filter-group">
+                    <label for="filtro-sexo">Sexo:</label>
+                    <select id="filtro-sexo" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        <option value="">Todos</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Femea">Femea</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id="loader" class="loader-container" style="display: none;">
+    <div id="loader" class="loader-container my-8" style="display: none;">
         <div class="spinner"></div>
     </div>
 
-    <section id="animais-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <section id="animais-container" class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
         <!-- Os cartões de animais serão adicionados aqui pelo JS -->
     </section>
 
@@ -109,7 +200,6 @@
         </section>
     </div><br>
 
-
     <!-- Cadastro dos animais -->
     <div class="bg-white/80 rounded-lg shadow-md p-1 max-w-9xl">
         <section class="mt-12">
@@ -123,7 +213,6 @@
             </a>
         </section>
     </div>
-    </main>
 
     <!-- Rodapé -->
     <footer class="bg-primary text-white mt-10 py-10 text-sm">
