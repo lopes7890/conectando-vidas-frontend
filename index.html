@@ -147,75 +147,33 @@
     </div>
   </section>
 
+  <div id="loader" class="loader-container" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
   <!-- Novas patinhas Section -->
-  <section class="py-12 w-full">
-    <div class="container mx-auto px-6">
-      <div class="relative mb-8">
-        <div class="flex items-center justify-center">
-          <div class="h-px bg-amber-300 w-1/4"></div>
-          <h2 class="text-primary text-3xl font-['Playfair_Display'] font-bold mx-4 whitespace-nowrap">
-            Novas patinhas por aqui
-          </h2>
-          <div class="h-px bg-amber-300 w-1/4"></div>
-          <div class="absolute -right-4 top-1/2 transform -translate-y-1/2">
-            <div class="w-10 h-10 flex items-center justify-center">
-              <i class="ri-footprint-line text-primary text-2xl"></i>
-            </div>
-            <div class="w-8 h-8 flex items-center justify-center -mt-2 ml-4">
-              <i class="ri-footprint-line text-primary text-xl"></i>
-            </div>
+  <div class="container mx-auto px-6">
+    <div class="relative mb-8">
+      <div class="flex items-center justify-center">
+        <div class="h-px bg-amber-300 w-1/4"></div>
+        <h2 class="text-primary text-3xl font-['Playfair_Display'] font-bold mx-4 whitespace-nowrap">
+          Novas patinhas por aqui
+        </h2>
+        <div class="h-px bg-amber-300 w-1/4"></div>
+        <div class="absolute -right-4 top-1/2 transform -translate-y-1/2">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-footprint-line text-primary text-2xl"></i>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center -mt-2 ml-4">
+            <i class="ri-footprint-line text-primary text-xl"></i>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  
+  <section id="animais-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-    <div class="relative">
-      <div class="flex flex-wrap justify-center gap-8">
-        <!-- Novas Patinhas card 1-->
-        <div class="flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-56 h-56 rounded-full bg-[#b8e3ff] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-            <img src="assets\img\dog.avif" alt="Max" class="w-full h-full object-cover rounded-full" />
-          </div>
-          <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
-          <p class="text-gray-600">info</p>
-          <p class="text-gray-600">idade</p>
-        </div>
-
-        <!-- Novas Patinhas card 2-->
-        <div class="flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-56 h-56 rounded-full bg-[#ffcba4] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-            <img src="assets\img\dog.avif" alt="Luna" class="w-full h-full object-cover rounded-full" />
-          </div>
-          <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
-          <p class="text-gray-600">info</p>
-          <p class="text-gray-600">idade</p>
-        </div>
-
-        <!-- Novas Patinhas card 3-->
-        <div class="flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-56 h-56 rounded-full bg-[#ffe9a4] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-            <img src="assets\img\dog.avif" alt="Pantera" class="w-full h-full object-cover rounded-full" />
-          </div>
-          <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
-          <p class="text-gray-600">info</p>
-          <p class="text-gray-600">idade</p>
-        </div>
-
-        <!-- Novas Patinhas card 4-->
-        <div class="flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-56 h-56 rounded-full bg-[#b8ffd8] p-2 overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-            <img src="assets\img\dog.avif" alt="Bob" class="w-full h-full object-cover rounded-full" />
-          </div>
-          <h3 class="text-primary text-2xl font-bold mt-4">Nome</h3>
-          <p class="text-gray-600">info</p>
-          <p class="text-gray-600">idade</p>
-        </div>
-      </div>
-    </div>
   </section>
   <!-- Como Funciona -->
 
@@ -413,6 +371,7 @@
 
   </footer>
 
+  <script src="./js/api/ultimosAnimaisAdicionados.js"></script>
   <script src="./js/utils/verificacaoDeValidadeDoToken.js"></script>
   <script type="module" src="./js/utils/esconder.js"></script>
 </body>

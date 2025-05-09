@@ -2,7 +2,7 @@ const carregarAnimais = async () => {
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
     try {
-      const resposta = await fetch('https://conectando-vidas-backend.onrender.com/animals'); // Substitua pela URL do seu backend
+      const resposta = await fetch('https://conectando-vidas-backend.onrender.com/ultimos/animais'); // Substitua pela URL do seu backend
       const animais = await resposta.json();
 
       const container = document.getElementById('animais-container');
@@ -10,7 +10,7 @@ const carregarAnimais = async () => {
       animais.forEach(animal => {
         // Criando o HTML de cada cartão de animal
         const divAnimal = document.createElement('div');
-        divAnimal.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-lg');
+        divAnimal.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'max-w-xs', 'w-full', 'mx-auto');
 
         // Criando a imagem do animal
         const img = document.createElement('img');
