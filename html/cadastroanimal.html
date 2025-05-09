@@ -41,24 +41,21 @@
     rel="stylesheet" />
 </head>
 
-<body class="bg-[#fdf1dc] min-h-screen">
+<body class="bg-[#fdf1dc] min-h-screen">    
+
+  <div id="loader" class="loader-container" style="display: none;">
+      <div class="spinner"></div>
+  </div>
+  
   <main class="container mx-auto px-6 py-10">
 
-    <div id="loader" class="loader-container" style="display: none;">
-      <div class="spinner"></div>
-    </div>
-    
     <form id="formCadastro" class="bg-white p-8 rounded-lg shadow-md space-y-6 max-w-3xl mx-auto">
       <h2 class="text-3xl font-bold text-primary mb-6 text-center">Cadastro de Animal</h2>
 
       <div>
         <label for="name" class="block text-primary font-semibold mb-1">Nome do Animal</label>
-<<<<<<< HEAD
         <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md p-2"
           required />
-=======
-        <input type="text" id="name" name="nomeAnimal" class="w-full border border-gray-300 rounded-md p-2" required />
->>>>>>> 2a5393267d30777b100b646dfaed810764a8d62f
       </div>
 
       <div>
@@ -86,27 +83,25 @@
         <label for="status_adotion" class="block text-primary font-semibold mb-1">Status da Adoção</label>
         <select id="status_adotion" name="status_adotion" class="w-full border border-gray-300 rounded-md p-2" required>
           <option value="">Selecione</option>
-          <option value="Disponível">Disponível</option>
-          <option value="Adotado">Adotado</option>
+          <option value="dispon_vel">Disponível</option>
+          <option value="adotado">Adotado</option>
         </select>
       </div>
 
       <div>
         <label for="nome_ong" class="block text-primary font-semibold mb-1">Nome da ONG</label>
-<<<<<<< HEAD
-        <input type="text" id="nome_ong" name="name_ong" class="w-full border border-gray-300 rounded-md p-2" required />
-=======
-        <select type="text" id="nome_ong" name="nomeOng" class="w-full border border-gray-300 rounded-md p-2" required>
+        <select type="text" id="nome_ong" name="nome_ong" class="w-full border border-gray-300 rounded-md p-2" required>
           <option value="">Selecione</option>
-          <option value="Disponível">Disponível</option>
-          <option value="Adotado">Adotado</option>
+          <option value="ONG Auqmia">ONG Auqmia</option>
+          <option value="Projeto MiAu">Projeto MiAu</option>
+          <option value="Adote Bicho">Adote Bicho</option>
+          <option value="Toca Segura">Toca Segura</option>
         </select>
       </div>
 
       <div>
-        <label for="foto" class="block text-primary font-semibold mb-1">Foto do Animal</label>
-        <input type="file" id="foto" name="foto" class="w-full border border-gray-300 rounded-md p-2" accept="image/*" required />
->>>>>>> 2a5393267d30777b100b646dfaed810764a8d62f
+        <label for="file" class="block text-primary font-semibold mb-1">Foto do Animal</label>
+        <input type="file" id="file" name="file" class="w-full border border-gray-300 rounded-md p-2" accept="image/*" required />
       </div>
 
       <div class="text-center">
@@ -126,6 +121,8 @@
     </div>
 
   </main>
+
+  <script src="../js/api/cadastroAnimais.js"></script>
 </body>
 
 </html>
