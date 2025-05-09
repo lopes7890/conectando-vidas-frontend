@@ -1,5 +1,5 @@
 const apiUrl = "https://conectando-vidas-backend.onrender.com/animals";
-let todosOsAnimaisGlobal = []; // Variável global para armazenar todos os animais
+let todosOsAnimaisGlobal = [];
 
 const loaderElement = document.getElementById("loader");
 const animaisContainerElement = document.getElementById("animais-container");
@@ -15,7 +15,7 @@ const exibirLoader = (exibir) => {
 
 const renderizarCardsAnimais = (listaAnimais) => {
     if (!animaisContainerElement) return;
-    animaisContainerElement.innerHTML = ""; // Limpar cards existentes
+    animaisContainerElement.innerHTML = "";
 
     if (listaAnimais.length === 0) {
         animaisContainerElement.innerHTML = 
@@ -23,19 +23,23 @@ const renderizarCardsAnimais = (listaAnimais) => {
         return;
     }
 
+      // Criando o HTML de cada cartão de animal
     listaAnimais.forEach(animal => {
         const divAnimal = document.createElement("div");
         divAnimal.classList.add("animal-card", "bg-white", "p-6", "rounded-lg", "shadow-lg", "flex", "flex-col", "justify-between");
 
+        // Criando a imagem do animal
         const img = document.createElement("img");
         img.src = (animal.foto && animal.foto.trim() !== "") ? animal.foto : "https://via.placeholder.com/300x200?text=Sem+Foto";
         img.alt = animal.nome || "Animal sem nome";
         img.classList.add("w-full", "h-48", "object-cover", "rounded-lg", "mb-4");
 
+         // Criando o título (nome do animal)
         const h2 = document.createElement("h2");
         h2.classList.add("text-xl", "font-semibold", "text-primary", "mb-2");
         h2.textContent = animal.nome || "Nome não disponível";
 
+         // Criando a descrição do animal (idade, sexo, porte)
         const p = document.createElement("p");
         p.classList.add("text-gray-600", "mb-4", "text-sm", "flex-grow");
         p.innerHTML = `
@@ -44,6 +48,7 @@ const renderizarCardsAnimais = (listaAnimais) => {
           <strong>Descrição:</strong> ${animal.descricao || "Não informada"}
         `;
 
+        // Criando o botão de adoção
         const a = document.createElement("a");
         a.href = `../html/perfil_animal.html?id=${animal.id_animal}`;
         a.classList.add("mt-auto");
@@ -52,6 +57,7 @@ const renderizarCardsAnimais = (listaAnimais) => {
         button.classList.add("bg-primary", "text-white", "px-6", "py-2", "rounded-button", "hover:bg-primary/90", "w-full", "transition", "duration-150");
         button.textContent = "Ver Detalhes";
 
+         // Montando o cartão com os elementos criados
         a.appendChild(button);
         divAnimal.appendChild(img);
         divAnimal.appendChild(h2);
@@ -69,19 +75,17 @@ const filtrarEExibirAnimais = () => {
 
     const animaisFiltrados = todosOsAnimaisGlobal.filter(animal => {
         const nomeMatch = termoNome === "" || (animal.nome && animal.nome.toLowerCase().includes(termoNome));
-        
         const idadeAnimalStr = animal.idade !== null && animal.idade !== undefined ? String(animal.idade).toLowerCase() : "";
         const idadeMatch = termoIdade === "" || idadeAnimalStr.includes(termoIdade);
-        
         const sexoAnimalStr = animal.sexo ? animal.sexo.toLowerCase() : "";
         const sexoMatch = termoSexo === "" || sexoAnimalStr === termoSexo;
-        
         return nomeMatch && idadeMatch && sexoMatch;
     });
 
     renderizarCardsAnimais(animaisFiltrados);
 };
 
+// Adicionando o cartão ao container
 const carregarTodosAnimais = async () => {
     exibirLoader(true);
     try {
@@ -90,11 +94,10 @@ const carregarTodosAnimais = async () => {
             throw new Error(`Erro HTTP: ${resposta.status}`);
         }
         todosOsAnimaisGlobal = await resposta.json();
-        renderizarCardsAnimais(todosOsAnimaisGlobal); // Exibe todos os animais inicialmente
+        renderizarCardsAnimais(todosOsAnimaisGlobal);
     } catch (erro) {
         if (animaisContainerElement) {
-            animaisContainerElement.innerHTML = 
-                `<p class="col-span-full text-center" style="color:red;">Erro ao carregar animais: ${erro.message}. Tente novamente mais tarde.</p>`;
+            animaisContainerElement.innerHTML = `<p class="col-span-full text-center" style="color:red;">Erro ao carregar animais: ${erro.message}. Tente novamente mais tarde.</p>`;
         }
         console.error("Erro ao carregar animais:", erro);
     } finally {
@@ -102,17 +105,8 @@ const carregarTodosAnimais = async () => {
     }
 };
 
-// Adicionar Event Listeners aos campos de filtro
-if (filtroNomeElement) {
-    filtroNomeElement.addEventListener("input", filtrarEExibirAnimais);
-}
-if (filtroIdadeElement) {
-    filtroIdadeElement.addEventListener("input", filtrarEExibirAnimais);
-}
-if (filtroSexoElement) {
-    filtroSexoElement.addEventListener("change", filtrarEExibirAnimais);
-}
+if (filtroNomeElement) filtroNomeElement.addEventListener("input", filtrarEExibirAnimais);
+if (filtroIdadeElement) filtroIdadeElement.addEventListener("input", filtrarEExibirAnimais);
+if (filtroSexoElement) filtroSexoElement.addEventListener("change", filtrarEExibirAnimais);
 
-// Carregar animais quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", carregarTodosAnimais);
-

@@ -31,7 +31,8 @@ const carregarPerfilAnimal = async () => {
       document.getElementById('animal-idade').innerHTML = `<span class="font-bold">Idade:</span> ${animal.idade} anos`;
       //document.getElementById('animal-nascimento').innerHTML = `<span class="font-bold">Nascimento:</span> ${animal.nascimento}`;
       //document.getElementById('animal-cor').innerHTML = `<span class="font-bold">Cor:</span> ${animal.cor}`;
-      document.getElementById('animal-sexo').innerHTML = `<span class="font-bold">Sexo:</span> ${animal.sexo}`;
+      const sexoAnimalFormatado = animal.sexo.charAt(0).toUpperCase() + animal.sexo.substring(1)
+      document.getElementById('animal-sexo').innerHTML = `<span class="font-bold">Sexo:</span> ${sexoAnimalFormatado}`;
       //document.getElementById('animal-especial').innerHTML = `<span class="font-bold">Especial:</span> ${animal.especial}`;
       document.getElementById('animal-descricao').innerHTML = `<span class="font-bold">Descrição:</span> ${animal.descricao}`;
       document.getElementById('animal-status').innerHTML = `<span class="font-bold">Status:</span> ${animal.status_adocao}`;
