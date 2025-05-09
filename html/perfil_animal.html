@@ -89,16 +89,22 @@
           <p id="animal-descricao" class="text-lg text-gray-700"><span class="font-bold">Descrição:</span></p>
           <p id="animal-status" class="text-lg text-gray-700"><span class="font-bold">status</span></p>
           <a href="../html/form_adocao.html">
-            <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
+            <button id="adotar" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
               Quero Já
             </button>
           </a>
+
+          <button id="excluirAnimal" onclick="excluirAnimal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
+              Excluir animal
+          </button>
         </div>
       </div>
     </section>
   </main>
 
   <script src="../js/api/informacaoDeCadaAnimal.js"></script>
+  <script src="../js/api/pegarDadosdoUsuario.js"></script>
+  <script src="../js/api/excluirAnimal.js"></script>
   <script src="../js/utils/verificacaoDeValidadeDoToken.js"></script>
   <script src="../js/utils/auth-checker-fixed.js"></script>
   <script type="module" src="../js/utils/esconder.js"></script>

@@ -11,11 +11,22 @@ const carregarPerfilAnimal = async () => {
         return;
       }
 
+
+      const tipoUser = localStorage.getItem("tipoUser");
+      console.log(tipoUser)
+
+      if (tipoUser == "voluntario") {
+        document.getElementById("excluirAnimal").style.display = "block"
+      } else {
+        document.getElementById("excluirAnimal").style.display = "none"
+      }
       // Obter o ID do animal a partir da URL
       const urlParams = new URLSearchParams(window.location.search);
 
       console.log(urlParams)
       const idAnimal = urlParams.get('id'); 
+
+      localStorage.setItem('animalId', idAnimal);
       
       const resposta = await fetch(`https://conectando-vidas-backend.onrender.com/animal/${idAnimal}`, {
         method: 'GET',
@@ -35,7 +46,19 @@ const carregarPerfilAnimal = async () => {
       document.getElementById('animal-sexo').innerHTML = `<span class="font-bold">Sexo:</span> ${sexoAnimalFormatado}`;
       //document.getElementById('animal-especial').innerHTML = `<span class="font-bold">Especial:</span> ${animal.especial}`;
       document.getElementById('animal-descricao').innerHTML = `<span class="font-bold">Descrição:</span> ${animal.descricao}`;
-      document.getElementById('animal-status').innerHTML = `<span class="font-bold">Status:</span> ${animal.status_adocao}`;
+      
+      if (animal.status_adocao == "adotado"){
+        document.getElementById('adotar').disabled = true
+        document.getElementById('adotar').style.backgroundColor = "gray"
+        document.getElementById('animal-status').innerHTML = `<span class="font-bold">Status:</span> ${animal.status_adocao}`;
+      } else {
+        document.getElementById('animal-status').innerHTML = `<span class="font-bold">Status:</span> disponível`;
+      }
+
+ 
+
+      
+      
     } catch (erro) {
       console.error('Erro ao carregar perfil do animal:', erro);
     } finally {

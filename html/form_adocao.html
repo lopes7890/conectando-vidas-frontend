@@ -72,8 +72,12 @@
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
       <h1 class="text-3xl font-bold text-primary mb-6 text-center">Formulário de Adoção</h1>
 
+      <div id="loader" class="loader-container" style="display: none;">
+        <div class="spinner"></div>
+      </div>
+
       <!-- Formulário Adoção -->
-      <form action=# method="POST" id="formAdocao" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form method="PUT" id="atualizarStatus" class="grid grid-cols-1 md:grid-cols-2 gap-6">
        
         <div class="space-y-4">
           <!-- Nome -->
@@ -150,7 +154,7 @@
           </div>
 
           <!-- Qual animal.... -->
-          <div>
+<!--           <div>
             <label for="#" class="block text-lg text-gray-700">Qual animal você quer adotar?</label>
             <select id="#" name="#"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
@@ -159,7 +163,7 @@
               <option value="cachorro2">cachorro2</option>
               <option value="cachorro3">cachorro3</option>
             </select>
-          </div>
+          </div> -->
 
       
           <!-- Experiência com animais -->
@@ -196,7 +200,7 @@
 
   <script src=""></script>
 </main>
-
+  <script src="../js/api/atualizarStatusDoAnimal.js"></script>
   <script src="../js/utils/auth-checker-fixed.js"></script>
   <script type="module" src="../js/utils/esconder.js"></script>
 </body>

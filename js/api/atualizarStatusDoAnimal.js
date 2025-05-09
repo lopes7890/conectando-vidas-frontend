@@ -1,4 +1,4 @@
-const form = document.getElementById('formVoluntario');
+const form = document.getElementById('atualizarStatus');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); 
@@ -8,14 +8,21 @@ form.addEventListener('submit', async (event) => {
     const tokenJWT = localStorage.getItem("token");
 
     // Cria um objeto com os dados do formulário
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+/*     const formData = new FormData(form);
+    const data = {};
+    for (const [key, value] of formData.entries()) {
+        if (value.trim() !== '') {
+            data[key] = value;
+        }
+    } */
 
-    data.age = Number(data.age);
+    const idAnimal = localStorage.getItem("animalId");
+
+    const data = { id_animal: Number(idAnimal)}
 
     try {
-        const response = await fetch('https://conectando-vidas-backend.onrender.com/cadastro/voluntario', {
-            method: 'POST',
+        const response = await fetch('https://conectando-vidas-backend.onrender.com/animal/adotado', {
+            method: 'PUT',
             headers: {
                 'Authorization': `${tokenJWT}`, // Adicionando o cabeçalho Authorization com o token JWT
                 'Content-Type': 'application/json' // Se necessário, adicione o tipo de conteúdo
@@ -27,10 +34,10 @@ form.addEventListener('submit', async (event) => {
         console.log('Resposta do backend:', result);
 
         if (response.ok) {
-          alert('Cadastro de voluntariado realizado com sucesso!');
-          window.location.href = '../index.html'
+          alert('Atualização realizada com sucesso!');
+          window.location.href = './adocao.html'
         } else {
-          alert('Erro ao cadastrar: ' + result.message ? result.message : result.error);
+          alert('Erro ao atualizar: ' + result.message ? result.message : result.error);
         }
     } catch (err) {
         console.error('Erro na requisição:', err);
