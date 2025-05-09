@@ -29,7 +29,7 @@
 <body class="bg-[#fdf1dc] min-h-screen flex items-center justify-center relative">
   <!-- Botão Voltar com ícone no canto superior esquerdo -->
   <div class="absolute top-4 left-4">
-    <a href="../index.html" class="flex items-center text-black py-2 px-4 rounded-button hover:bg-white">
+    <a href="../index.html" class="flex items-center text-black py-2 px-4 rounded-button">
   <img src="../assets/img/Voltar.png" alt="Voltar" class="w-6 h-6 mr-2" /> Voltar
 </a>
   </div>
@@ -59,8 +59,7 @@
           <select id="tipo" name="type"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required>
-              <option value="adotante">Adotante</option>
-              <option value="doador">Doador</option>
+              <option value="adotante">Adotante / Doador</option>
               <option value="voluntario">Voluntario</option>
             </select>
         </div>
@@ -97,8 +96,12 @@
       </div>
 
       <div class="col-span-2 text-center mt-6">
-        <button type="submit" class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Salvar Alterações</button>
-      </div>
+  <button type="submit" class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Salvar Alterações</button>
+</div>
+
+<div class="col-span-2 text-center mt-4">
+  <button type="button" class="w-full bg-red-600 text-white py-2 rounded-button hover:bg-red-700">Excluir Conta</button>
+</div>
     </form>
   </div>
 

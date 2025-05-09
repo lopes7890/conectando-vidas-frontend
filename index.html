@@ -57,30 +57,6 @@
     rel="stylesheet" />
 </head>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const isLoggedIn = localStorage.getItem("usuarioLogado");
-    const botaoEntrar = document.getElementById("botaoEntrar");
-    const botaoCadastrar = document.getElementById("botaoCadastrar");
-    const botaoSair = document.getElementById("botaoSair");
-
-    if (isLoggedIn) {
-      botaoEntrar.style.display = "none";
-      botaoCadastrar.style.display = "none";
-      botaoSair.style.display = "block";
-    } else {
-      botaoSair.style.display = "none";
-    }
-
-    botaoSair?.addEventListener("click", () => {
-      localStorage.removeItem("usuarioLogado");
-      location.reload();
-    });
-  });
-</script>
-
-
 <!-- Body -->
 
 <body class="bg-[#fdf1dc] min-h-screen">

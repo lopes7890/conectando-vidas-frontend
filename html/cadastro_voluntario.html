@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,30 +31,30 @@
     <h1 class="text-2xl font-bold text-primary mb-6 text-center">Cadastro de Voluntário</h1>
 
     <div id="loader" class="loader-container" style="display: none;">
-        <div class="spinner"></div>
+      <div class="spinner"></div>
     </div>
 
     <form action="#" id="formVoluntario" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Coluna Esquerda -->
       <div class="space-y-4">
-        <!-- <div>
-          <label for="nome" class="block text-lg text-gray-700">Nome</label>
-          <input type="text" id="nome" name="name" placeholder="Digite seu nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
-        </div>
-
-        <div>
-          <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
-          <input type="text" id="telefone" name="phone" placeholder="Digite seu telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
-        </div> -->
-
         <div>
           <label for="idade" class="block text-lg text-gray-700">Idade</label>
-          <input type="number" id="idade" name="age" placeholder="Digite sua idade" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
+          <input type="number" id="idade" name="age" placeholder="Digite sua idade"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            required />
         </div>
 
         <div>
           <label for="disponibilidade" class="block text-lg text-gray-700">Disponibilidade</label>
-          <input type="text" id="disponibilidade" name="disponibility" placeholder="Ex: Manhã, Tarde, Noite" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required />
+          <input type="text" id="disponibilidade" name="disponibility" placeholder="Ex: Manhã, Tarde, Noite"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            required />
+        </div>
+
+        <div>
+          <label for="motivo" class="block text-lg text-gray-700">Motivo do Cadastro</label>
+          <textarea id="descricao" name="experience_description" placeholder="Motivo do seu cadastro"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
         </div>
       </div>
 
@@ -61,7 +62,8 @@
       <div class="space-y-4">
         <div>
           <label for="area" class="block text-lg text-gray-700">Área de Interesse</label>
-          <select id="area" name="interest_area" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+          <select id="area" name="interest_area"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="Eventos">Eventos</option>
             <option value="Administração">Administração</option>
             <option value="Outras">Outras</option>
@@ -70,7 +72,8 @@
 
         <div>
           <label for="experiencia" class="block text-lg text-gray-700">Experiência</label>
-          <select id="area" name="experience" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+          <select id="experience" name="experience"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="Sim">Sim</option>
             <option value="Não">Não</option>
           </select>
@@ -78,22 +81,24 @@
 
         <div>
           <label for="descricao" class="block text-lg text-gray-700">Descreva sua Experiência</label>
-          <textarea id="descricao" name="experience_description" placeholder="Descreva brevemente sua experiência" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-        </div>
-
-        <div>
-          <label for="motivo" class="block text-lg text-gray-700">Motivo do Cadastro</label>
-          <input type="text" id="motivo" name="reason" placeholder="Por que deseja se cadastrar?" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+          <textarea id="descricao" name="experience_description" placeholder="Descreva brevemente sua experiência"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
         </div>
       </div>
 
       <div class="col-span-2 text-center mt-6">
-        <button type="submit" class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Cadastrar</button>
+        <button type="submit"
+          class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Cadastrar</button>
       </div>
     </form>
 
-    <div class="col-span-2 text-center mt-6">
-        <a href="../index.html"><button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90">Voltar</button></a>
+    <div class="absolute top-4 left-4">
+      <a href="../index.html">
+        <button class="text-black py-2 px-4 rounded-button hover:bg-white/50 flex items-center">
+          <img src="../assets/img/Voltar.png" alt="Voltar" class="w-5 h-5 mr-2" />
+          Voltar
+        </button>
+      </a>
     </div>
   </div>
 
