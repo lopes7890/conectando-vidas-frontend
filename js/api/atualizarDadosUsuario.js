@@ -30,8 +30,11 @@ form.addEventListener('submit', async (event) => {
         console.log('Resposta do backend:', result);
 
         if (response.ok) {
-          alert('Atualização realizada com sucesso!');
-          window.location.href = '../index.html'
+            if(data.type == "adotante"){
+                localStorage.setItem("tipoUser", "adotante");
+            }
+            alert('Atualização realizada com sucesso!');
+            window.location.href = '../index.html'
         } else {
           alert('Erro ao atualizar: ' + result.message ? result.message : result.error);
         }
