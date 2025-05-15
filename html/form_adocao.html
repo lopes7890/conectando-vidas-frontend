@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +44,7 @@
 
 <body class="bg-[#fdf1dc] min-h-screen">
 
+
   <!-- Header -->
   <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
     <div class="container mx-auto flex justify-center items-center">
@@ -67,6 +69,15 @@
     </div>
   </header>
 
+
+  <a href="../index.html">
+    <button class="text-black py-2 px-4 rounded-button hover:bg-white/50 flex items-center">
+      <img src="../assets/img/Voltar.png" alt="Voltar" class="w-5 h-5 mr-2" />
+      Voltar
+    </button>
+  </a>
+
+
   <!-- CONTEÚDO ESPECÍFICO DA PÁGINA -->
   <main class="py-12 px-6 container mx-auto flex justify-center items-center">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
@@ -78,7 +89,7 @@
 
       <!-- Formulário Adoção -->
       <form method="PUT" id="atualizarStatus" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-       
+
         <div class="space-y-4">
           <!-- Nome -->
           <div>
@@ -87,7 +98,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-      
+
           <!-- Telefone -->
           <div>
             <label for="telefone" class="block text-lg text-gray-700">Telefone</label>
@@ -95,7 +106,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-      
+
           <!-- Idade -->
           <div>
             <label for="idade" class="block text-lg text-gray-700">Idade</label>
@@ -103,7 +114,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-      
+
           <!-- CEP -->
           <div>
             <label for="cep" class="block text-lg text-gray-700">CEP</label>
@@ -111,7 +122,7 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-        
+
           <!-- Rua -->
           <div>
             <label for="rua" class="block text-lg text-gray-700">Rua</label>
@@ -119,16 +130,16 @@
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               required />
           </div>
-          
+
           <!-- Observações -->
           <div>
             <label for="obs" class="block text-lg text-gray-700">Observações</label>
             <input type="text" id="obs" name="note"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"/>
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
         </div>
 
-          <div class="space-y-4">
+        <div class="space-y-4">
           <!-- Cidade -->
           <div>
             <label for="cidade" class="block text-lg text-gray-700">Cidade/UF</label>
@@ -154,7 +165,7 @@
           </div>
 
           <!-- Qual animal.... -->
-<!--           <div>
+          <!--           <div>
             <label for="#" class="block text-lg text-gray-700">Qual animal você quer adotar?</label>
             <select id="#" name="#"
               class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
@@ -165,26 +176,23 @@
             </select>
           </div> -->
 
-      
+
           <!-- Experiência com animais -->
           <div>
             <label for="experiencia" class="block text-lg text-gray-700">Experiência prévia com animais?</label>
             <div class="flex items-center mt-2 space-x-4">
               <input id="sim" name="experiencia" type="radio"
-                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                required />
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" required />
               <label for="sim" class="text-gray-700">Sim</label>
-              
+
               <input id="nao" name="experiencia" type="radio"
-                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                required />
+                class="h-5 w-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" required />
               <label for="nao" class="text-gray-700">Não</label>
             </div>
             <input type="text" id="#" name="#" placeholder="Se sim, descreva"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
+              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
-      
+
           <!-- Confirmar -->
           <div class="text-center mt-6">
             <button type="submit"
@@ -198,12 +206,14 @@
     </div>
   </main>
 
+
+
+
   <script src=""></script>
-</main>
+  </main>
   <script src="../js/api/atualizarStatusDoAnimal.js"></script>
   <script src="../js/utils/auth-checker-fixed.js"></script>
   <script type="module" src="../js/utils/esconder.js"></script>
 </body>
-</html>
 
-    
+</html>
