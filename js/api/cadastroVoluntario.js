@@ -29,6 +29,7 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
           alert('Cadastro de voluntariado realizado com sucesso!');
           localStorage.setItem("tipoUser", "voluntario");
+          localStorage.setItem("idVoluntario", result.idVoluntario)
           window.location.href = '../index.html'
         } else {
           alert('Erro ao cadastrar: ' + result.message ? result.message : result.error);

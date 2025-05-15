@@ -6,6 +6,7 @@ form.addEventListener('submit', async (event) => {
     loader.style.display = "flex";
 
     const tokenJWT = localStorage.getItem("token");
+    const idVoluntario = localStorage.getItem("idVoluntario");
 
     // Cria um objeto com os dados do formulário
     const formData = new FormData(form);
@@ -14,6 +15,10 @@ form.addEventListener('submit', async (event) => {
         if (value.trim() !== '') {
             data[key] = value;
         }
+    }
+
+    if (idVoluntario){
+         data.id_voluntary = Number(idVoluntario);
     }
 
     try {
@@ -32,6 +37,7 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             if(data.type == "adotante"){
                 localStorage.setItem("tipoUser", "adotante");
+                localStorage.removeItem("idVoluntario");
             }
             alert('Atualização realizada com sucesso!');
             window.location.href = '../index.html'
