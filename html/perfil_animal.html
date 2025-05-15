@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conectando Vidas</title>
 
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  
+
 
   <script>
     tailwind.config = {
@@ -43,7 +44,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
-<body class="bg-[#fdf1dc] min-h-screen">
+<body class="bg-[#fee7bc] min-h-screen">
 
   <!-- Header -->
   <header class="bg-[#fdf1dc] py-4 px-6 shadow-sm">
@@ -78,14 +79,14 @@
     <!--Inserir conteudo aqui-->
     <section class="perfil-animal">
       <div class="flex flex-wrap items-start gap-8">
-        <img id="animal-imagem" alt="imagem" class="border-4 border-green-300 p-2" style="width: 40%;">    
+        <img id="animal-imagem" alt="imagem" class="border-4 border-green-300 p-2" style="width: 40%;">
         <div class="w-full sm:w-96 h-auto bg-white p-6 rounded-lg flex flex-col space-y-6">
           <h1 id="animal-nome" class="text-3xl font-bold text-primary mb-2">Nome do Animal</h1>
           <p id="animal-idade" class="text-lg text-gray-700"><span class="font-bold">Idade:</span></p>
-<!--           <p id="animal-nascimento" class="text-lg text-gray-700"><span class="font-bold">Nascimento:</span> 01/2021</p>
+          <!--           <p id="animal-nascimento" class="text-lg text-gray-700"><span class="font-bold">Nascimento:</span> 01/2021</p>
           <p id="animal-cor" class="text-lg text-gray-700"><span class="font-bold">Cor:</span> Marrom</p> -->
           <p id="animal-sexo" class="text-lg text-gray-700"><span class="font-bold">Sexo:</span></p>
-<!--           <p id="animal-especial" class="text-lg text-gray-700"><span class="font-bold">Especial:</span> Adora bolinhas</p> -->
+          <!--           <p id="animal-especial" class="text-lg text-gray-700"><span class="font-bold">Especial:</span> Adora bolinhas</p> -->
           <p id="animal-descricao" class="text-lg text-gray-700"><span class="font-bold">Descrição:</span></p>
           <p id="animal-status" class="text-lg text-gray-700"><span class="font-bold">status</span></p>
           <a href="../html/form_adocao.html">
@@ -94,8 +95,9 @@
             </button>
           </a>
 
-          <button id="excluirAnimal" onclick="excluirAnimal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
-              Excluir animal
+          <button id="excluirAnimal" onclick="excluirAnimal()"
+            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">
+            Excluir animal
           </button>
         </div>
       </div>
@@ -109,4 +111,5 @@
   <script src="../js/utils/auth-checker-fixed.js"></script>
   <script type="module" src="../js/utils/esconder.js"></script>
 </body>
+
 </html>
