@@ -6,11 +6,13 @@ const carregarAnimais = async () => {
       const animais = await resposta.json();
 
       const container = document.getElementById('animais-container');
+      //const container = document.getElementById('relative');
       
       animais.forEach(animal => {
         // Criando o HTML de cada cartão de animal
         const divAnimal = document.createElement('div');
         divAnimal.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'max-w-xs', 'w-full', 'mx-auto');
+
 
         // Criando a imagem do animal
         const img = document.createElement('img');

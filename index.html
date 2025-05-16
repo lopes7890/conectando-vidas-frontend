@@ -32,6 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/estilo.css">
   <style>
     :where([class^="ri-"])::before {
       content: "\f3c2";
@@ -123,10 +124,6 @@
     </div>
   </section>
 
-  <div id="loader" class="loader-container" style="display: none;">
-    <div class="spinner"></div>
-  </div>
-
   <!-- Novas patinhas Section -->
   <div class="container mx-auto px-6">
     <div class="relative mb-8">
@@ -148,7 +145,12 @@
     </div>
   </div>
 
-  <section id="animais-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <section id="animais-container" class="flex flex-wrap gap-6 justify-center">
+    <div class="relative">
+      <div id="loader" class="loader-container-home" style="display: none;">
+        <div class="spinner-home"></div>
+      </div>
+    </div>
   </section><br>
 </body>
 

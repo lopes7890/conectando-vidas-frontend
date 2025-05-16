@@ -2,8 +2,6 @@ const form = document.getElementById('formVoluntario');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); 
-    const loader = document.getElementById("loader");
-    loader.style.display = "flex";
 
     const tokenJWT = localStorage.getItem("token");
 
@@ -14,6 +12,8 @@ form.addEventListener('submit', async (event) => {
     data.age = Number(data.age);
 
     try {
+        const loader = document.getElementById("loader");
+        loader.style.display = "flex";
         const response = await fetch('https://conectando-vidas-backend.onrender.com/cadastro/voluntario', {
             method: 'POST',
             headers: {
