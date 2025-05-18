@@ -26,13 +26,17 @@ const carregarAnimais = async () => {
         h2.textContent = animal.nome;
         
         // Criando a descrição do animal (idade, sexo, porte)
+        let formatarDescricao = animal.descricao
+        if(formatarDescricao.length >= 50){
+          formatarDescricao = formatarDescricao.slice(0, 30) + '...'
+        }
         const p = document.createElement('p');
         p.classList.add('text-gray-600', 'mb-4');
         const sexoAnimalFormatado = animal.sexo.charAt(0).toUpperCase() + animal.sexo.substring(1)
         p.innerHTML = `
           Idade: ${animal.idade} anos<br>
           Sexo: ${sexoAnimalFormatado}<br>
-          Descrição: ${animal.descricao}
+          Descrição: ${formatarDescricao}
         `;
         
         // Criando o botão de adoção

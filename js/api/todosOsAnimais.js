@@ -40,12 +40,16 @@ const renderizarCardsAnimais = (listaAnimais) => {
         h2.textContent = animal.nome || "Nome não disponível";
 
          // Criando a descrição do animal (idade, sexo, porte)
+        let formatarDescricao = animal.descricao
+        if(formatarDescricao.length >= 50){
+            formatarDescricao = formatarDescricao.slice(0, 30) + '...'
+        }
         const p = document.createElement("p");
         p.classList.add("text-gray-600", "mb-4", "text-sm", "flex-grow");
         p.innerHTML = `
           <strong>Idade:</strong> ${animal.idade !== null && animal.idade !== undefined ? animal.idade : "Não informada"} anos<br>
           <strong>Sexo:</strong> ${animal.sexo || "Não informado"}<br>
-          <strong>Descrição:</strong> ${animal.descricao || "Não informada"}
+          <strong>Descrição:</strong> ${formatarDescricao || "Não informada"}
         `;
 
         // Criando o botão de adoção
